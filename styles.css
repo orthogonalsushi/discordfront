@@ -1,0 +1,156 @@
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    /* background colours for main, side bar, server bar */
+    --background-primary: oklab(0.321088 -0.000220731 -0.00934622);
+    --background-secondary: oklab(0.296332 -0.000731647 -0.00768477);
+    --background-tertiary: oklab(0.23892 0.000131361 -0.00592163);
+
+    /* nav bar: */
+    /* for title h1*/
+    --header-primary: oklab(0.963963 -0.000228554 -0.00283051);
+
+    /* for nav bar divider*/
+    --background-modifier-accent: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
+
+    /* for normal btn */
+    --interactive-normal: oklab(0.786807 -0.0025776 -0.0110238);
+
+    /* for hovering */
+    --background-modifier-hover: oklab(0.431938 0.00109309 -0.0132537 / 0.3);
+    --interactive-hover: oklab(0.899401 -0.00192499 -0.00481987);
+
+    /* for active btns */
+    --interactive-active: oklab(0.999994 0.0000455678 0.0000200868);
+    --background-modifier-selected: oklab(0.431938 0.00109309 -0.0132537 / 0.6);
+}
+
+.no-hover {
+  cursor: default; /* Set default cursor for everything inside this div */
+}
+
+.no-hover a {
+  cursor: pointer; /* Override cursor to pointer specifically for links */
+}
+
+.no-select {
+    user-select: none; /* Prevent text selection */
+  }
+  
+
+
+
+body {
+  color: white;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* .app-item {
+  /* background-color: rgb(122, 244, 244); */
+/* border: 1px solid black; */
+
+.servers-bar {
+  flex-shrink: 0;
+  width: 72px;
+  background-color: var(--background-tertiary);
+}
+
+.side-bar {
+  flex-shrink: 0;
+  width: 240px;
+  background-color: var(--background-secondary);
+}
+
+.main {
+  flex-grow: 1;
+  background-color: var(--background-primary);
+}
+
+/* nav bar in main */
+
+.main-nav-con {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  min-height: 32px;
+}
+
+.main-nav-bar {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+}
+
+.nav-bar-title {
+  color: var(--header-primary);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Symbols";
+}
+
+.wave-icon-wrap,
+.nav-bar-divider,
+.support-icon-wrap,
+.nav-tabs-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.support-icon-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--background-modifier-accent);
+}
+
+.nav-tabs-item {
+  padding: 2px 8px;
+  color: var(--interactive-normal);
+}
+
+.nav-tabs-item:hover {
+  background-color: var(--background-modifier-hover);
+  border-radius: 3px;
+  color: var(--interactive-hover);
+  cursor: pointer;
+}
+
+.nav-tabs-item:active {
+    background-color: var(--background-modifier-selected);
+    border-radius: 3px;
+    color: var(--interactive-active)
+}
+
+.nav-title-wrapper {
+  display: flex;
+  margin-right: 8px;
+  align-items: center;
+}
+
+.nav-bar-tabs {
+  display: flex;
+}
+
+.right-bar {
+  display: none;
+  flex-shrink: 0;
+  width: 232px;
+  background-color: var(--background-secondary);
+}
