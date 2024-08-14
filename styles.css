@@ -4,9 +4,16 @@
 }
 
 :root {
-  --font-primary: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Symbols';
-  --font-display: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Symbols';
-  
+  --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Symbols";
+  --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif, "Apple Symbols";
+
+  /* for scroll bar */
+  --custom-scrollbar-width: 10px;
+  --custom-scrollbar-margin: 1px;
+  --custom-scrollbar-border-radius: calc(var(--custom-scrollbar-width) / 2);
+
   /* background colours for main, side bar, server bar */
   --background-primary: oklab(0.321088 -0.000220731 -0.00934622);
   --background-secondary: oklab(0.296332 -0.000731647 -0.00768477);
@@ -40,9 +47,58 @@
   /* for friends list in main */
   --background-modifier-accent: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
   --background-modifier-hover: oklab(0.431938 0.00109309 -0.0132537 / 0.3);
+
+  --scrollbar-auto-track: color-mix(
+    in oklab,
+    var(--primary-630) 100%,
+    var(--theme-base-color, black) var(--theme-base-color-amount, 0%)
+  );
+
+  --scrollbar-auto-thumb: color-mix(
+    in oklab,
+    var(--primary-730) 100%,
+    var(--theme-base-color, black) var(--theme-base-color-amount, 0%)
+  );
+
+  --primary-630: hsl(var(--primary-630-hsl) / 1);
+  --primary-630-hsl: 220 calc(var(--saturation-factor, 1) * 6.5%) 18%;
+
+  --primary-730: hsl(var(--primary-730-hsl) / 1);
+  --primary-730-hsl: 225 calc(var(--saturation-factor, 1) * 7.1%) 11%;
+
+
 }
 
-textarea, input, ::placeholder {
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 24px;
+}
+
+/* ::-webkit-scrollbar-track { */
+  /* background-color: var(--scrollbar-auto-track); */
+  /* background-color: red; */
+  /* border-radius: var(--custom-scrollbar-border-radius); */
+  /* margin-block: var(--custom-scrollbar-margin); */
+
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--scrollbar-auto-track);
+  border: 7px solid transparent;
+  border-radius: 20px;
+  margin: var(--custom-scrollbar-margin);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-auto-thumb);
+  border-radius: 20px;
+  border: 7px solid transparent;
+  background-clip: padding-box;
+}
+
+textarea,
+input,
+::placeholder {
   font-weight: 400;
 }
 
@@ -58,11 +114,10 @@ textarea, input, ::placeholder {
   user-select: none; /* Prevent text selection */
 }
 
-
 .unstyle-list {
   list-style-type: none; /* Removes bullets */
-  padding: 0;            /* Removes default padding */
-  margin: 0;   
+  padding: 0; /* Removes default padding */
+  margin: 0;
 }
 
 body {
@@ -200,8 +255,6 @@ body {
   color: inherit;
 }
 
-
-
 .main-search-icon {
   height: 32px;
   width: 32px;
@@ -219,7 +272,7 @@ body {
 .friends-heading-text {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   margin: 16px 20px 8px 30px;
   text-transform: uppercase;
   font-size: 12px;
@@ -229,7 +282,7 @@ body {
 
 .main-friends-list {
   margin-top: 8px;
-  overflow-y: scroll;
+  overflow: hidden scroll;
   flex-grow: 1;
 }
 
@@ -250,6 +303,7 @@ body {
   border-bottom: 1px solid transparent;
   border-top-width: 0.727273px;
   height: 62px;
+  /* height: 100vh; */
   border-radius: 8px;
 }
 
@@ -273,7 +327,6 @@ body {
 .wrap-avt-img {
   border-radius: 50%;
 }
-
 
 .friend-info-text {
   display: flex;
@@ -303,7 +356,6 @@ body {
   /* visibility: hidden; */
 }
 
-
 .message-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -315,7 +367,6 @@ body {
   background-color: var(--background-secondary);
 }
 
-
 .friend-info-subtext {
   display: flex;
   justify-content: flex-start;
@@ -323,4 +374,3 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
-
