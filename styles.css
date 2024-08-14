@@ -20,6 +20,9 @@
   --background-tertiary: oklab(0.23892 0.000131361 -0.00592163);
 
   /* nav bar: */
+  /* for shadow under navbar */
+  --elevation-low: rgba(2, 2, 2, 0.2) 0px 1px 0px 0px;
+
   /* for title h1*/
   --header-primary: oklab(0.963963 -0.000228554 -0.00283051);
 
@@ -73,13 +76,6 @@
 ::-webkit-scrollbar {
   width: 24px;
 }
-
-/* ::-webkit-scrollbar-track { */
-  /* background-color: var(--scrollbar-auto-track); */
-  /* background-color: red; */
-  /* border-radius: var(--custom-scrollbar-border-radius); */
-  /* margin-block: var(--custom-scrollbar-margin); */
-
 
 ::-webkit-scrollbar-track-piece {
   background-color: var(--scrollbar-auto-track);
@@ -162,6 +158,8 @@ body {
   justify-content: space-between;
   padding: 8px;
   min-height: 32px;
+  box-shadow: var(--elevation-low);
+  box-sizing: content-box;
 }
 
 .main-nav-bar {
@@ -372,5 +370,88 @@ body {
   justify-content: flex-start;
   color: var(--header-secondary);
   font-size: 12px;
+  font-weight: 500;
+}
+
+
+
+/* side bar */
+
+.side-bar-item {
+  height: 62px;
+}
+
+/* scrollbar */
+.side-bar-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-bar-main::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-auto-thumb);
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+/* side search bar */
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar-main {
+  overflow: hidden scroll;
+}
+
+.side-bar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  min-height: 48px;
+  padding: 0 10px;
+  box-shadow: var(--elevation-low);
+}
+
+.side-bar-input {
+  background-color: var(--background-tertiary);
+  border: none;
+  outline: 0;
+  flex-grow: 1;
+  padding: 1px 6px;
+  min-height: 28px;
+  border-radius: 4px;
+  width: 100%;
+  font-weight: 500;
+}
+
+
+/* side bar main heading */
+.side-main-title {
+  display: flex;
+  margin-left: 8px;
+  margin-top: 8px;
+  min-height: 42px;
+  padding: 0 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* .side-main-title:hover {
+  background-color: var(--background-secondary);
+} */
+
+.wave-main-wrap {
+  margin-right: 12px;
+}
+
+.main-title-wrapper {
+  flex-grow: 1;
+}
+
+.main-title-text {
+  display: flex;
+  font-size: 16px;
   font-weight: 500;
 }
