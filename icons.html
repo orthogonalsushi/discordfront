@@ -388,3 +388,34 @@ box shadow under nav bars:
 --elavation-low: rgba(2, 2, 2, 0.2) 0px 1px 0px 0px
 box-shadow: var(--elevation-low);
 -->
+
+
+<!-- 
+For input placeholder:
+ color: var(--text-muted);
+ --text-muted: color-mix(
+    in oklab,
+    var(--primary-360) 100%,
+    var(--theme-text-color, black) var(--theme-text-color-amount, 0%)
+  );
+
+  --text-muted: oklab(0.686679 -0.00398019 -0.0150182);
+-->
+
+<!-- 
+DIRECT MESSAGES
+
+color: var(--channels-default);
+--channels-default: color-mix(
+    in oklab,
+    var(--primary-360) 100%,
+    var(--theme-text-color, black) var(--theme-text-color-amount, 0%)
+  );
+
+--channels-default: oklab(0.686679 -0.00398019 -0.0150182);
+
+for list item in private channels
+
+--background-modifier-active: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
+
+-->

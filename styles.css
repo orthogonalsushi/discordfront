@@ -4,10 +4,8 @@
 }
 
 :root {
-  --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif, "Apple Symbols";
-  --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif, "Apple Symbols";
+  --font-primary: "Inter", "Noto Sans", Helvetica, Arial, sans-serif;
+  --font-display: "Inter", "Noto Sans", Helvetica, Arial, sans-serif;
 
   /* for scroll bar */
   --custom-scrollbar-width: 10px;
@@ -41,7 +39,6 @@
   --background-modifier-selected: oklab(0.431938 0.00109309 -0.0132537 / 0.6);
 
   /* for search bar */
-  --background-tertiary: oklab(0.23892 0.000131361 -0.00592163);
   --text-normal: oklab(0.899401 -0.00192499 -0.00481987);
 
   /* for friends heading in main */
@@ -69,7 +66,14 @@
   --primary-730: hsl(var(--primary-730-hsl) / 1);
   --primary-730-hsl: 225 calc(var(--saturation-factor, 1) * 7.1%) 11%;
 
+  /* for input box */
+  --text-muted: oklab(0.686679 -0.00398019 -0.0150182);
 
+  /* for side bar label */
+  --channels-default: oklab(0.686679 -0.00398019 -0.0150182);
+  
+  /* background for active private channel */
+  --background-modifier-active: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
 }
 
 /* scrollbar */
@@ -96,6 +100,7 @@ textarea,
 input,
 ::placeholder {
   font-weight: 400;
+  color: var(--text-muted);
 }
 
 .no-hover {
@@ -313,6 +318,8 @@ body {
   display: flex;
   height: 40px;
   align-items: center;
+  overflow: hidden;
+  max-width: 90%;
 }
 
 .friend-icon-wrapper {
@@ -330,6 +337,7 @@ body {
   display: flex;
   flex-direction: column;
   height: inherit;
+  overflow: hidden;
 }
 
 .friend-info-name {
@@ -343,7 +351,9 @@ body {
 .info-name-display {
   color: var(--header-primary);
   font-weight: 600;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .info-name-discriminator {
@@ -351,6 +361,9 @@ body {
   font-size: 14px;
   line-height: 16px;
   margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   /* visibility: hidden; */
 }
 
@@ -422,8 +435,8 @@ body {
   padding: 1px 6px;
   min-height: 28px;
   border-radius: 4px;
-  width: 100%;
   font-weight: 500;
+  font-size: 14px;
 }
 
 
@@ -433,17 +446,24 @@ body {
   margin-left: 8px;
   margin-top: 8px;
   min-height: 42px;
-  padding: 0 8px;
+  padding-left: 8px;
+  padding-right: 16px;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 4px;
 }
 
-/* .side-main-title:hover {
-  background-color: var(--background-secondary);
-} */
+.side-main-title:hover {
+  background-color: var(--background-modifier-hover);
+}
 
 .wave-main-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 12px;
+  height: 32px;
+  width: 32px;
 }
 
 .main-title-wrapper {
@@ -453,5 +473,87 @@ body {
 .main-title-text {
   display: flex;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  max-height: 20px;
+  letter-spacing: 0.24px;
 }
+
+.side-bar-label {
+  padding: 18px 8px 4px 18px;
+  font-size: 12px;
+  color: var(--channels-default);
+}
+
+.side-label-text {
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+}
+
+.side-bar-label:hover {
+  color: var(--interactive-hover);
+}
+
+
+/* dm list */
+
+.dm-item {
+  display: flex;
+  height: 42px;
+  margin-left: 8px;
+  color: var(--channels-default);
+  border-radius: 4px;
+}
+
+.dm-item:hover {
+  color: var(--interactive-hover);
+  background-color: var(--background-modifier-hover);
+}
+
+.dm-item:active {
+  color: var(--interactive-active);
+  background-color: var(--background-modifier-active);
+}
+
+.dm-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 8px;
+  overflow: hidden;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.dm-icon-wrapper-outer {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.dm-info-text {
+  overflow: hidden;
+}
+
+.dm-info-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrap-dm-img {
+  border-radius: 50%;
+}
+
+
+/* Prevent horizontal scrollbar */
+.app-item {
+  overflow-x: hidden; 
+}
+
+/* .servers-bar, .side-bar, .main, .right-bar {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+

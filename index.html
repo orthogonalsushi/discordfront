@@ -13,6 +13,14 @@
         crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <script defer src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -20,11 +28,12 @@
         <div class="servers-bar app-item">
             servers
         </div>
-        <div class="side-bar app-item">
+        <div class="side-bar app-item no-select">
             <div class="side-bar-nav">
                 <input class="side-bar-input" placeholder="Find a conversation">
             </div>
             <div class="side-bar-main">
+                <!-- side bar title -->
                 <div class="side-main-title">
                     <div class="wave-main-wrap"><!-- wave svg -->
                         <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -41,35 +50,65 @@
                         <div class="main-title-text">Friends</div>
                     </div>
                 </div>
-                <ul class="unstyle-list">
-                    <li class="side-bar-item">dmchannel 1</li>
-                    <li class="side-bar-item">dmchannel 2</li>
-                    <li class="side-bar-item">dmchannel 3</li>
-                    <li class="side-bar-item">dmchannel 4</li>
-                    <li class="side-bar-item">dmchannel 5</li>
-                    <li class="side-bar-item">dmchannel 6</li>
-                    <li class="side-bar-item">dmchannel 7</li>
-                    <li class="side-bar-item">dmchannel 8</li>
-                    <li class="side-bar-item">dmchannel 9</li>
-                    <li class="side-bar-item">dmchannel 10</li>
-                    <li class="side-bar-item">dmchannel 11</li>
-                    <li class="side-bar-item">dmchannel 12</li>
-                    <li class="side-bar-item">dmchannel 13</li>
-                    <li class="side-bar-item">dmchannel 14</li>
-                    <li class="side-bar-item">dmchannel 15</li>
-                    <li class="side-bar-item">dmchannel 16</li>
-                    <li class="side-bar-item">dmchannel 17</li>
-                    <li class="side-bar-item">dmchannel 18</li>
-                    <li class="side-bar-item">dmchannel 19</li>
-                    <li class="side-bar-item">dmchannel 20</li>
+
+                <!-- side bar label -->
+                <div class="side-bar-label">
+                    <div class="side-label-text">Direct Messages</div>
+                </div>
+
+                <ul class="private-channels unstyle-list">
+                    <li>
+                        <div class="dm-item dm-item-1">
+                            <div class="dm-info">
+                                <div class="dm-icon-wrapper-outer">
+                                    <div class="dm-icon-wrapper-inner">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                            <foreignObject class="wrap-dm-img" x="0" y="0" width="32" height="32">
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=44"
+                                                        alt=" " aria-hidden="true"></div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="dm-info-text">
+                                    <div class="dm-info-name">
+                                        David
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dm-item dm-item-2">
+                            <div class="dm-info">
+                                <div class="dm-icon-wrapper-outer">
+                                    <div class="dm-icon-wrapper-inner">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                            <foreignObject class="wrap-dm-img" x="0" y="0" width="32" height="32">
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="https://cdn.discordapp.com/avatars/900435714880180225/cee12ae94c7d2b0a2d401ebd2c99ccae.webp?size=44"
+                                                        alt=" " aria-hidden="true"></div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="dm-info-text">
+                                    <div class="dm-info-name">
+                                        who r u?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="side-bar-profile">
 
             </div>
         </div>
-        <div class="main app-item">
-            <div class="main-nav-con no-hover no-select">
+        <div class="main app-item no-select">
+            <div class="main-nav-con no-hover">
                 <div class="main-nav-bar">
                     <div class="wave-icon-wrap"><!-- wave svg -->
                         <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
