@@ -6,6 +6,8 @@ function main () {
     messageIconToggle()
 
     pillToggle()
+    
+    pillToggleClick()
 }
 
 
@@ -36,12 +38,12 @@ function messageIconToggle() {
     messageIcons.forEach( (icon) => {
         icon.addEventListener("mouseover", () => {
             if (!icon.classList.contains("bg-icon")) {
-                icon.classList.add("bg-icon")
+                icon.classList.add("bg-icon");
             }
         })
         icon.addEventListener("mouseout", () => {
             if (icon.classList.contains("bg-icon")) {
-                icon.classList.remove("bg-icon")
+                icon.classList.remove("bg-icon");
             }
         })
     })
@@ -56,12 +58,34 @@ function pillToggle() {
         const pillChild = pill.firstElementChild; 
         icon.addEventListener("mouseover", () => {
             if (!pillChild.classList.contains("pill-hover")) {
-                pillChild.classList.add("pill-hover")
+                pillChild.classList.add("pill-hover");
             }
         })
         icon.addEventListener("mouseout", () => {
             if (pillChild.classList.contains("pill-hover")) {
-                pillChild.classList.remove("pill-hover")
+                pillChild.classList.remove("pill-hover");
+            }
+        })
+    })
+}
+
+
+function pillToggleClick() {
+    const serverIcons = document.querySelectorAll(".server-wrapper-inner");
+    
+    let clicked = null;
+
+    serverIcons.forEach( (icon) => {
+        const pill = (icon.parentElement).previousElementSibling;
+        const pillChild = pill.firstElementChild; 
+        icon.addEventListener("click", () => {
+            if (!pillChild.classList.contains("pill-clicked")) {
+                pillChild.classList.add("pill-clicked");
+                if (clicked) {
+                	clicked.classList.remove("pill-clicked");
+                }
+   
+                clicked = pillChild;
             }
         })
     })

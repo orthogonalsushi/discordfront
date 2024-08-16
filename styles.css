@@ -734,21 +734,20 @@ body {
 .server-pill-inside {
   background-color: var(--header-primary);
   width: 8px;
-  height: 1px;
   margin-left: -4px;
+  height: 1px;
+  visibility: hidden;
   border-radius: 0 4px 4px 0;
   transition: all .1s ease-out;
-  display: none;
 }
 
 .pill-hover {
   /* 20px */
-  display: block;
-  transform: scaleY(20);
+  visibility: visible;
+  height: 20px;
 }
 
-/* .pill-active {
-  40px
-  display: block;
-  transform: scaleY(40);
-} */
+.pill-clicked {
+  visibility: visible;
+  height: 40px;
+}
