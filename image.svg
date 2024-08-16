@@ -1,7 +1,16 @@
-<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
-                                            <foreignObject x="0" y="0" width="32" height="32">
-                                              <div><img
-                                                  src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=44"
-                                                  alt=" " aria-hidden="true"></div>
-                                            </foreignObject>
-                                        </svg>
+<svg width="48" height="48" viewBox="0 0 48 48" class="svg_c5f96a" overflow="visible">
+  <defs>
+    <path
+      d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z"
+      id="4b6928b2-ffb5-429c-8e77-b45a4e79f166-blob_mask"></path>
+  </defs>
+  <mask id="4b6928b2-ffb5-429c-8e77-b45a4e79f166" fill="black" x="0" y="0" width="48" height="48">
+    <use href="#4b6928b2-ffb5-429c-8e77-b45a4e79f166-blob_mask" fill="white" class=""></use>
+  </mask>
+  <foreignObject x="0" y="0" width="48" height="48" mask="url(#4b6928b2-ffb5-429c-8e77-b45a4e79f166)">
+    <div class="wrapper_f90abb" role="treeitem" data-list-item-id="guildsnav___393846237255696385" tabindex="-1"
+      aria-label="  cs50"><img class="icon_f90abb"
+        src="https://cdn.discordapp.com/icons/393846237255696385/fbfd26f292fa0d095058eb715d7c6c40.webp?size=160" alt=" "
+        width="48" height="48" aria-hidden="true"></div>
+  </foreignObject>
+</svg>

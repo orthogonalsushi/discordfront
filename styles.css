@@ -74,6 +74,11 @@
   
   /* background for active private channel */
   --background-modifier-active: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
+
+  /* server bar */
+  --bg-brand: rgb(88, 101, 242);
+
+  --white: rgb(255, 255, 255);
 }
 
 /* scrollbar */
@@ -114,6 +119,7 @@ input,
 .no-select {
   user-select: none; /* Prevent text selection */
 }
+
 
 .unstyle-list {
   list-style-type: none; /* Removes bullets */
@@ -466,6 +472,7 @@ body {
   width: 32px;
 }
 
+
 .main-title-wrapper {
   flex-grow: 1;
 }
@@ -550,10 +557,70 @@ body {
 
 
 /* Prevent horizontal scrollbar */
-.app-item {
+/* .app-item {
   overflow-x: hidden; 
+} */
+
+/* servers bar */
+
+/* scrollbar */
+
+.servers-bar {
+  overflow-y: auto;
 }
 
-/* .servers-bar, .side-bar, .main, .right-bar {
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+.servers-bar::-webkit-scrollbar {
+  display: none;
+}
 
+.servers-bar-inner {
+  padding-top: 12px;
+}
+
+.server-list-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.friends-wrapper-inner:hover {
+  background-color: var(--bg-brand);
+  transition: scale.15s ease-out,background-color.15s ease-out,color.15s ease-out;
+  color: var(--white);
+}
+
+.server-wrapper-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends-wrapper-inner {
+  background-color: var(--background-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* server bar divider */
+
+.server-bar-divider {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.server-divider-inner {
+  height: 2px;
+  width: 32px;
+  border-radius: 1px;
+  background-color: var(--background-modifier-accent);
+}
+
+
+
+/* .nav-bar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--background-modifier-accent);
+} */
