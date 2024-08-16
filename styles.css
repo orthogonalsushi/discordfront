@@ -75,6 +75,9 @@
   /* background for active private channel */
   --background-modifier-active: oklab(0.431937 0.00109309 -0.0132537 / 0.48);
 
+  /* for user profile in side bar */
+  --background-secondary-alt: oklab(0.260828 0.000630535 -0.0075893);
+
   /* server bar */
   --bg-brand: rgb(88, 101, 242);
 
@@ -421,6 +424,7 @@ body {
 
 .side-bar-main {
   overflow: hidden scroll;
+  flex-grow: 1;
 }
 
 .side-bar-nav {
@@ -524,7 +528,7 @@ body {
   background-color: var(--background-modifier-active);
 }
 
-.dm-info {
+.dm-info, .client-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -535,17 +539,20 @@ body {
   max-width: 100%;
 }
 
-.dm-icon-wrapper-outer {
+.dm-icon-wrapper, .client-icon-wrapper {
   display: flex;
   align-items: center;
+}
+
+.dm-icon-wrapper {
   margin-right: 12px;
 }
 
-.dm-info-text {
+.dm-info-text, .client-info-text {
   overflow: hidden;
 }
 
-.dm-info-name {
+.dm-info-name, .client-info-name, .client-info-status {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -555,6 +562,51 @@ body {
   border-radius: 50%;
 }
 
+/* side bar profile */
+.side-bar-profile {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--background-secondary-alt);
+  height: 52px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  margin-left: 8px;
+  border-radius: 4px;
+  height: 39px;
+}
+
+.client-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px 0px 4px 8px;
+}
+
+.client-info-name {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--header-primary);
+  max-width: 100%;
+}
+
+.client-info-status {
+  font-size: 12px;
+  color: var(--header-secondary);
+  line-height: 13px;
+  font-weight: 400;
+  max-width: 100%;
+}
+
+.client-info:hover {
+  background-color: var(--background-modifier-selected);
+}
 
 /* Prevent horizontal scrollbar */
 /* .app-item {
