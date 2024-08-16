@@ -552,7 +552,7 @@ body {
   overflow: hidden;
 }
 
-.dm-info-name, .client-info-name, .client-info-status {
+.dm-info-name, .client-info-name, .client-info-status, .client-status-status {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -578,6 +578,7 @@ body {
   margin-left: 8px;
   border-radius: 4px;
   height: 39px;
+  max-width: 80%;
 }
 
 .client-info-text {
@@ -602,6 +603,21 @@ body {
   line-height: 13px;
   font-weight: 400;
   max-width: 100%;
+  position: relative;
+  height: 13px;
+}
+
+.client-status-status, .client-status-username {
+  transition: all .22s ease;
+  height: 13px;
+}
+
+.client-status-username {
+  width: fit-content
+}
+
+.move-up {
+  transform: translateY(-100%);
 }
 
 .client-info:hover {
