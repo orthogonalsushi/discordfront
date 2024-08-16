@@ -616,8 +616,15 @@ body {
   width: fit-content
 }
 
+/* client transformation */
 .move-up {
   transform: translateY(-100%);
+}
+
+/* message icon transformation */
+
+.bg-icon {
+  background-color: var(--background-tertiary);
 }
 
 .client-info:hover {
@@ -653,14 +660,24 @@ body {
 
 .friends-wrapper-inner:hover {
   background-color: var(--bg-brand);
-  transition: scale.15s ease-out,background-color.15s ease-out,color.15s ease-out;
   color: var(--white);
+  border-radius: 30%;
 }
 
 .server-wrapper-inner {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+}
+
+.server-icons-obj {
+  border-radius: 50%;
+  transition: all .15s ease-out;
+}
+
+.server-icons-obj:hover {
+  border-radius: 30%;
 }
 
 .friends-wrapper-inner {
@@ -668,6 +685,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  transition: all .15s ease-out;
 }
 
 /* server bar divider */
@@ -691,4 +709,46 @@ body {
   width: 1px;
   height: 24px;
   background-color: var(--background-modifier-accent);
+} */
+
+
+/* server side pill */
+.server-list-item {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.server-side-pill {
+  display: flex;
+  align-items: center;
+  width: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+}
+
+.server-pill-inside {
+  background-color: var(--header-primary);
+  width: 8px;
+  height: 1px;
+  margin-left: -4px;
+  border-radius: 0 4px 4px 0;
+  transition: all .1s ease-out;
+  display: none;
+}
+
+.pill-hover {
+  /* 20px */
+  display: block;
+  transform: scaleY(20);
+}
+
+/* .pill-active {
+  40px
+  display: block;
+  transform: scaleY(40);
 } */
