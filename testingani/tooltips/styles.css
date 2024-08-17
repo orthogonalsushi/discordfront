@@ -1,0 +1,123 @@
+:root {
+    --img-size: 500px;
+}    
+
+body {
+    background-color: rgb(16, 48, 61);
+}    
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    background-color: grey;
+    transform: scale(1);
+}
+
+.side {
+    background-color: grey;
+}
+
+.cat-img {
+    width: auto;
+    height: var(--img-size);
+}
+
+
+.cat-img-div {
+    overflow: hidden;
+    height: var(--img-size);
+    width: var(--img-size);
+    border-radius: 50%;
+    transition: all 0.22s ease;
+    cursor: pointer;
+}    
+
+.cat-img-div:hover {
+    border-radius: 30%;
+}    
+
+.contains {
+    position: relative;
+}
+
+.contains::before,
+.contains::after {
+    --scale: 1;
+    --tooltip-color: black;
+    --arrow-size: 10px;
+
+    /* position: absolute; */
+    /* top: 50%;
+    right: -10%; */
+    content: "";
+    transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
+    transition: transform 0.15s ease;
+    /* transform-origin: left center; */
+}
+
+.right.contains::before,
+.right.contains::after {
+    position: fixed;
+    top: 50%;
+    right: -10%;
+    transform-origin: left center;
+    
+}
+
+.top.contains::before,
+.top.contains::after {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform-origin: bottom;
+
+}
+
+.contains::before {
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    max-width: 100%;
+    border-radius: 0.3rem;
+    background: var(--tooltip-color);
+}
+
+.right.contains::before {
+    --translate-x: calc(100% - var(--arrow-size));
+}
+.top.contains::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+}
+
+.contains:hover::before,
+.contains:hover::after {
+    --scale: 1;
+}
+
+.contains::after {
+    --translate-x: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: 10px solid transparent;
+    /* transform-origin:right center; */
+}
+
+.right.contains::after {
+    transform-origin: right center;
+    border-right-color: var(--tooltip-color);
+}
+.top.contains::after {
+    transform-origin: top;
+    border-top-color: var(--tooltip-color);
+}
+
+.limiting {
+    background-color: aqua;
+    padding: 20px;
+    height: 300px;
+    /* overflow: hidden; */
+}

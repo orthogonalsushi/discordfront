@@ -1,0 +1,97 @@
+:root {
+    --img-size: 200px;
+}    
+
+body {
+    background-color: rgb(16, 48, 61);
+}    
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    background-color: brown;
+}
+
+.wrapper {
+    transform: scale(1);
+}
+
+.cat-img {
+    width: auto;
+    height: var(--img-size);
+}
+
+
+.cat-img-div {
+    overflow: hidden;
+    height: var(--img-size);
+    width: var(--img-size);
+    border-radius: 50%;
+    transition: all 0.22s ease;
+    cursor: pointer;
+}    
+
+.cat-img-div:hover {
+    border-radius: 30%;
+}    
+
+/* .contains {
+    position: relative;
+} */
+
+.contains::before,
+.contains::after {
+    --scale: 0;
+    --tooltip-color: black;
+    --arrow-size: 10px;
+
+    position: relative;
+    top: 50%;
+    right: -10%;
+    content: "";
+    transform: translateX(var(--translate-x, 0)) translateY(-50%) scale(var(--scale));
+    transition: transform 0.15s ease;
+    transform-origin: left center;
+}
+
+.contains::before,
+.contains::after {
+    position: fixed;
+}
+
+.contains::before {
+    --translate-x: calc(100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    max-width: 100%;
+    border-radius: 0.3rem;
+    background: var(--tooltip-color);
+}
+
+
+.contains:hover::before,
+.contains:hover::after {
+    --scale: 1;
+}
+
+.contains::after {
+    --translate-x: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: 10px solid transparent;
+    border-right-color: var(--tooltip-color);
+    transform-origin:right center;
+}
+
+.limiting {
+    background-color: aqua;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
