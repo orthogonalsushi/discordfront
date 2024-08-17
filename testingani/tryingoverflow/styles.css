@@ -48,7 +48,7 @@ body {
     --tooltip-color: black;
     --arrow-size: 10px;
 
-    position: relative;
+    /* position: relative; */
     top: 50%;
     right: -10%;
     content: "";
@@ -93,5 +93,5 @@ body {
     background-color: aqua;
     padding: 20px;
     overflow: hidden;
-    position: relative;
+    
 }

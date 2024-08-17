@@ -658,17 +658,18 @@ body {
 
 /* scrollbar */
 
-.servers-bar {
+/* .servers-bar {
   overflow-x: visible;
   overflow-y: scroll;
+} */
+
+.servers-bar-inner {
+  padding-top: 12px;
+  transform: scale(1);
 }
 
 .servers-bar::-webkit-scrollbar {
   display: none;
-}
-
-.servers-bar-inner {
-  padding-top: 12px;
 }
 
 .server-list-wrapper {
@@ -804,8 +805,8 @@ body {
 .tt-right.tooltips::before,
 .tt-right.tooltips::after {
   position: fixed;
-  top: 50%;
-  right: -10%;
+  top: 45%;
+  right: -65%;
   transform-origin: left center;
 }
 
@@ -860,4 +861,6 @@ body {
 .tt-right.tooltips::after {
   border-right-color: var(--tooltip-color);
   transform-origin: right center;
+  right: -55%;
+  top: 53%;
 }
