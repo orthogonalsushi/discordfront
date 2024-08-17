@@ -1,0 +1,21 @@
+function messageIconToggle() {
+    const friendItem = document.querySelectorAll(".friends-item")
+
+    friendItem.forEach( (iconParent) => {
+        // disc = iconParent.querySelector(".friend-info .friend-info-text .friend-info-name .info-name-discriminator");
+        iconParent.addEventListener("mouseover", () => {
+            icon = iconParent.querySelector(".message-icon-wrapper");
+            if (!icon.classList.contains("bg-icon")) {
+                icon.classList.add("bg-icon");
+            }
+            // disc.style.visibility = "visible";
+        })
+        iconParent.addEventListener("mouseout", () => {
+            icon = iconParent.querySelector(".message-icon-wrapper");
+            if (icon.classList.contains("bg-icon")) {
+                icon.classList.remove("bg-icon");
+            }
+            // disc.style.visibility = "hidden";
+        })
+    })
+}

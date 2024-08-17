@@ -1,12 +1,10 @@
 
 
-function main () {
+function main() {
     clientStatus()
 
-    messageIconToggle()
-
     pillToggle()
-    
+
     pillToggleClick()
 }
 
@@ -32,30 +30,12 @@ function clientStatus() {
 }
 
 
-function messageIconToggle() {
-    const messageIcons = document.querySelectorAll(".message-icon-wrapper")
-
-    messageIcons.forEach( (icon) => {
-        icon.addEventListener("mouseover", () => {
-            if (!icon.classList.contains("bg-icon")) {
-                icon.classList.add("bg-icon");
-            }
-        })
-        icon.addEventListener("mouseout", () => {
-            if (icon.classList.contains("bg-icon")) {
-                icon.classList.remove("bg-icon");
-            }
-        })
-    })
-}
-
-
 function pillToggle() {
     const serverIcons = document.querySelectorAll(".server-wrapper-inner")
 
-    serverIcons.forEach( (icon) => {
+    serverIcons.forEach((icon) => {
         const pill = (icon.parentElement).previousElementSibling;
-        const pillChild = pill.firstElementChild; 
+        const pillChild = pill.firstElementChild;
         icon.addEventListener("mouseover", () => {
             if (!pillChild.classList.contains("pill-hover")) {
                 pillChild.classList.add("pill-hover");
@@ -72,23 +52,24 @@ function pillToggle() {
 
 function pillToggleClick() {
     const serverIcons = document.querySelectorAll(".server-wrapper-inner");
-    
+
     let clicked = null;
 
-    serverIcons.forEach( (icon) => {
+    serverIcons.forEach((icon) => {
         const pill = (icon.parentElement).previousElementSibling;
-        const pillChild = pill.firstElementChild; 
+        const pillChild = pill.firstElementChild;
         icon.addEventListener("click", () => {
             if (!pillChild.classList.contains("pill-clicked")) {
                 pillChild.classList.add("pill-clicked");
                 if (clicked) {
-                	clicked.classList.remove("pill-clicked");
+                    clicked.classList.remove("pill-clicked");
                 }
-   
+
                 clicked = pillChild;
             }
         })
     })
 }
+
 
 main()

@@ -373,7 +373,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 .message-icon-wrapper {
@@ -395,6 +395,13 @@ body {
   font-weight: 500;
 }
 
+.friends-item:hover .message-icon-wrapper {
+  background-color: var(--background-tertiary);
+}
+
+.friends-item:hover .info-name-discriminator {
+  visibility: visible;
+}
 
 
 /* side bar */
@@ -461,10 +468,17 @@ body {
   justify-content: flex-start;
   align-items: center;
   border-radius: 4px;
+  color: var(--channels-default)
 }
 
 .side-main-title:hover {
   background-color: var(--background-modifier-hover);
+  color: var(--interactive-hover);
+}
+
+.side-main-title:active {
+  background-color: var(--background-modifier-active);
+  color: var(--interactive-active);
 }
 
 .wave-main-wrap {
@@ -474,6 +488,7 @@ body {
   margin-right: 12px;
   height: 32px;
   width: 32px;
+  color: inherit;
 }
 
 
@@ -487,6 +502,7 @@ body {
   font-weight: 600;
   max-height: 20px;
   letter-spacing: 0.24px;
+  color: inherit;
 }
 
 .side-bar-label {
