@@ -54,6 +54,7 @@ function pillToggleClick() {
     const serverIcons = document.querySelectorAll(".server-wrapper-inner");
 
     let clicked = null;
+    let clickedIcon = null;
 
     serverIcons.forEach((icon) => {
         const pill = (icon.parentElement).previousElementSibling;
@@ -61,11 +62,21 @@ function pillToggleClick() {
         icon.addEventListener("click", () => {
             if (!pillChild.classList.contains("pill-clicked")) {
                 pillChild.classList.add("pill-clicked");
+                
+                if (icon.classList.contains("friends-wrapper-inner")) {
+                    icon.classList.add("clicked-pill-icon");
+                }
+                
                 if (clicked) {
                     clicked.classList.remove("pill-clicked");
+
+                    if (clickedIcon.classList.contains("friends-wrapper-inner")) {
+                        clickedIcon.classList.remove("clicked-pill-icon");
+                    }
                 }
 
                 clicked = pillChild;
+                clickedIcon = icon;
             }
         })
     })

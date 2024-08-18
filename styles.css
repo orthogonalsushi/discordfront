@@ -706,11 +706,16 @@ body {
   border-radius: 30%;
 }
 
+.clicked-pill-icon.friends-wrapper-inner {
+  background-color: var(--bg-brand);
+}
+
 .server-wrapper-inner {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .server-icons-obj {
@@ -792,6 +797,10 @@ body {
 .pill-clicked {
   visibility: visible;
   height: 40px;
+}
+
+.clicked-pill-icon {
+  background-color: var(--bg-brand);
 }
 
 
