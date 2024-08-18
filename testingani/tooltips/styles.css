@@ -1,5 +1,5 @@
 :root {
-    --img-size: 500px;
+    --img-size: 200px;
 }    
 
 body {
@@ -12,12 +12,6 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 90vh;
-    background-color: grey;
-    transform: scale(1);
-}
-
-.side {
-    background-color: grey;
 }
 
 .cat-img {
@@ -45,38 +39,22 @@ body {
 
 .contains::before,
 .contains::after {
-    --scale: 1;
+    --scale: 0;
     --tooltip-color: black;
     --arrow-size: 10px;
 
-    /* position: absolute; */
-    /* top: 50%;
-    right: -10%; */
-    content: "";
-    transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
-    transition: transform 0.15s ease;
-    /* transform-origin: left center; */
-}
-
-.right.contains::before,
-.right.contains::after {
-    position: fixed;
+    position: absolute;
     top: 50%;
     right: -10%;
+    content: "";
+    transform: translateX(var(--translate-x, 0)) translateY(-50%) scale(var(--scale));
+    transition: transform 0.15s ease;
     transform-origin: left center;
-    
-}
-
-.top.contains::before,
-.top.contains::after {
-    position: absolute;
-    top: -3%;
-    left: 50%;
-    transform-origin: bottom;
-
 }
 
 .contains::before {
+    --translate-x: calc(100% - var(--arrow-size));
+
     content: attr(data-tooltip);
     color: white;
     padding: .5rem;
@@ -86,12 +64,6 @@ body {
     background: var(--tooltip-color);
 }
 
-.right.contains::before {
-    --translate-x: calc(100% - var(--arrow-size));
-}
-.top.contains::before {
-    --translate-y: calc(-100% - var(--arrow-size));
-}
 
 .contains:hover::before,
 .contains:hover::after {
@@ -103,21 +75,12 @@ body {
 
     content: '';
     border: 10px solid transparent;
-    /* transform-origin:right center; */
-}
-
-.right.contains::after {
-    transform-origin: right center;
     border-right-color: var(--tooltip-color);
-}
-.top.contains::after {
-    transform-origin: top;
-    border-top-color: var(--tooltip-color);
+    transform-origin:right center;
 }
 
 .limiting {
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 20px;
-    height: 300px;
-    /* overflow: hidden; */
+    overflow: visible;
 }

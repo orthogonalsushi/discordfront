@@ -302,6 +302,23 @@ body {
 
 /* friends list */
 
+.contains-friends {
+  margin-top: 8px;
+}
+
+.friends-item::before {
+  width: 96%;
+  border-top: 1px solid var(--background-modifier-accent);
+  border-top-width: 0.727273px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2%;
+  right: 2%;
+
+  /* display: block; */
+}
+
 .friends-item {
   display: flex;
   align-items: center;
@@ -313,16 +330,21 @@ body {
   margin-right: 10px;
   line-height: 20px;
   cursor: pointer;
-  border-top: 1px solid var(--background-modifier-accent);
+  /* border-top: 1px solid var(--background-modifier-accent); */
   border-bottom: 1px solid transparent;
-  border-top-width: 0.727273px;
+  /* border-top-width: 0.727273px; */
   height: 62px;
   /* height: 100vh; */
   border-radius: 8px;
+  position: relative;
 }
 
 .friends-item:hover {
   background-color: var(--background-modifier-hover);
+}
+
+.friends-item:hover::before {
+  border-top-color: transparent;
 }
 
 .friend-info {
@@ -785,12 +807,9 @@ body {
   --tooltip-color: #111214;
   --arrow-size: 10px;
 
-  /* top: -3%; */
   content: "";
-  /* transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale)); */
   transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
   transition: transform 50ms linear;
-  /* transform-origin: center; */
 
   pointer-events: none;
 }
@@ -805,8 +824,9 @@ body {
 .tt-right.tooltips::before,
 .tt-right.tooltips::after {
   position: fixed;
-  top: 45%;
-  right: -65%;
+  /* top: 50%; */
+  top: 43%;
+  right: -60%;
   transform-origin: left center;
 }
 
@@ -820,23 +840,28 @@ body {
 
 
 .tooltips::before {
-  /* --translate-y: calc(-100% - var(--arrow-size)); */
 
   content: attr(data-tooltip);
   color: var(--interactive-hover);
-  padding: 7px 10px 7px 10px;
   width: max-content;
   border-radius: 5px;
   background: var(--tooltip-color);
-  font-size: 12px;
 }
 
 .tt-top.tooltips::before {
   --translate-y: calc(-100% - var(--arrow-size));
+  padding: 7px 10px 7px 10px;
+  font-size: 12px;
 }
 
 .tt-right.tooltips::before {
   --translate-x: calc(100% - var(--arrow-size));
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 190px;
+  text-align: left;
+  max-height: 55px;
 }
 
 .tooltips:hover::before,
@@ -844,23 +869,16 @@ body {
   --scale: 1;
 }
 
-.tooltips::after {
-  --translate-y: calc(-1 * var(--arrow-size));
-
-  content: '';
-  border: 5.5px solid transparent;
-  /* border-top-color: var(--tooltip-color);
-  transform-origin: top; */
-}
-
 .tt-top.tooltips::after {
+  border: 5.5px solid transparent;
+  --translate-y: calc(-1 * var(--arrow-size));
   border-top-color: var(--tooltip-color);
   transform-origin: top;
 }
 
 .tt-right.tooltips::after {
+  border: 5px solid transparent;
+  --translate-x: calc(-1 * var(--arrow-size));
   border-right-color: var(--tooltip-color);
   transform-origin: right center;
-  right: -55%;
-  top: 53%;
 }

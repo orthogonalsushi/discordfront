@@ -19,3 +19,203 @@ function messageIconToggle() {
         })
     })
 }
+
+
+/* tooltips */
+
+.tooltips {
+  position: relative;
+}
+
+.tooltips::before,
+.tooltips::after {
+  --scale: 0;
+  --tooltip-color: #111214;
+  --arrow-size: 10px;
+
+  /* top: -3%; */
+  content: "";
+  /* transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale)); */
+  transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
+  transition: transform 50ms linear;
+  /* transform-origin: center; */
+
+  pointer-events: none;
+}
+
+.tt-top.tooltips::before,
+.tt-top.tooltips::after {
+  position: absolute;
+  top: -3%;
+  transform-origin: center;
+}
+
+.tt-right.tooltips::before,
+.tt-right.tooltips::after {
+  position: fixed;
+  top: 45%;
+  right: -65%;
+  transform-origin: left center;
+}
+
+.server-list-wrapper {
+  transform: scale(1);
+}
+
+.server-wrapper-inner {
+  position: relative;
+}
+
+
+.tooltips::before {
+  /* --translate-y: calc(-100% - var(--arrow-size)); */
+
+  content: attr(data-tooltip);
+  color: var(--interactive-hover);
+  padding: 7px 10px 7px 10px;
+  width: max-content;
+  border-radius: 5px;
+  background: var(--tooltip-color);
+  font-size: 12px;
+}
+
+.tt-top.tooltips::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+}
+
+.tt-right.tooltips::before {
+  --translate-x: calc(100% - var(--arrow-size));
+}
+
+.tooltips:hover::before,
+.tooltips:hover::after {
+  --scale: 1;
+}
+
+.tooltips::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: 5.5px solid transparent;
+  /* border-top-color: var(--tooltip-color);
+  transform-origin: top; */
+}
+
+.tt-top.tooltips::after {
+  border-top-color: var(--tooltip-color);
+  transform-origin: top;
+}
+
+.tt-right.tooltips::after {
+  border-right-color: var(--tooltip-color);
+  transform-origin: right center;
+  right: -55%;
+  top: 53%;
+}
+
+
+
+
+/* tooltips */
+
+.tooltips {
+  position: relative;
+}
+
+.tooltips::before,
+.tooltips::after {
+  --scale: 0;
+  --tooltip-color: #111214;
+  --arrow-size: 10px;
+
+  /* top: -3%; */
+  content: "";
+  /* transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale)); */
+  transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
+  transition: transform 50ms linear;
+  /* transform-origin: center; */
+
+  pointer-events: none;
+}
+
+.tt-top.tooltips::before,
+.tt-top.tooltips::after {
+  position: absolute;
+  top: -3%;
+  transform-origin: center;
+}
+
+.tt-right.tooltips::before,
+.tt-right.tooltips::after {
+  position: fixed;
+  top: 50%;
+  right: -60%;
+  /* right: -55%;
+  top: 53%; */
+  transform-origin: left center;
+}
+
+.server-list-wrapper {
+  transform: scale(1);
+}
+
+.server-wrapper-inner {
+  position: relative;
+}
+
+
+.tooltips::before {
+  /* --translate-y: calc(-100% - var(--arrow-size)); */
+
+  content: attr(data-tooltip);
+  color: var(--interactive-hover);
+  /* padding: 7px 10px 7px 10px; */
+  width: max-content;
+  border-radius: 5px;
+  background: var(--tooltip-color);
+  /* font-size: 12px; */
+}
+
+.tt-top.tooltips::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+  padding: 7px 10px 7px 10px;
+  font-size: 12px;
+}
+
+.tt-right.tooltips::before {
+  --translate-x: calc(100% - var(--arrow-size));
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 190px;
+  text-align: left;
+}
+
+.tooltips:hover::before,
+.tooltips:hover::after {
+  --scale: 1;
+}
+
+.tooltips::after {
+  /* --translate-y: calc(-1 * var(--arrow-size)); */
+  /* content: ''; */
+  /* border: 5.5px solid transparent; */
+  /* border-top-color: var(--tooltip-color);
+  transform-origin: top; */
+}
+
+.tt-top.tooltips::after {
+  border: 5.5px solid transparent;
+  --translate-y: calc(-1 * var(--arrow-size));
+  border-top-color: var(--tooltip-color);
+  transform-origin: top;
+}
+
+.tt-right.tooltips::after {
+  border: 5px solid transparent;
+  --translate-x: calc(-1 * var(--arrow-size));
+  border-right-color: var(--tooltip-color);
+  transform-origin: right center;
+  /* right: -55%;
+  top: 53%; */
+}
