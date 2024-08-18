@@ -13,18 +13,180 @@
         crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <script defer src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="app">
+        <!-- servers bar -->
         <div class="servers-bar app-item">
-            servers
+            <div class="servers-bar-inner">
+                <ul class="unstyle-list">
+                    <li class="server-list-item">
+                        <div class="server-side-pill"><span class="server-pill-inside"></span></div>
+                        <div class="server-list-wrapper">
+                            <div class="friends-wrapper-inner server-wrapper-inner">
+                                <div class="tooltips tt-right" data-tooltip="  Direct Messages">
+                                    <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="30"
+                                        height="30" fill="none" viewBox="0 0 24 24">
+                                        <path fill="oklab(0.899401 -0.00192499 -0.00481987)"
+                                            d="M19.73 4.87a18.2 18.2 0 0 0-4.6-1.44c-.21.4-.4.8-.58 1.21-1.69-.25-3.4-.25-5.1 0-.18-.41-.37-.82-.59-1.2-1.6.27-3.14.75-4.6 1.43A19.04 19.04 0 0 0 .96 17.7a18.43 18.43 0 0 0 5.63 2.87c.46-.62.86-1.28 1.2-1.98-.65-.25-1.29-.55-1.9-.92.17-.12.32-.24.47-.37 3.58 1.7 7.7 1.7 11.28 0l.46.37c-.6.36-1.25.67-1.9.92.35.7.75 1.35 1.2 1.98 2.03-.63 3.94-1.6 5.64-2.87.47-4.87-.78-9.09-3.3-12.83ZM8.3 15.12c-1.1 0-2-1.02-2-2.27 0-1.24.88-2.26 2-2.26s2.02 1.02 2 2.26c0 1.25-.89 2.27-2 2.27Zm7.4 0c-1.1 0-2-1.02-2-2.27 0-1.24.88-2.26 2-2.26s2.02 1.02 2 2.26c0 1.25-.88 2.27-2 2.27Z"
+                                            class=""></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="server-list-item">
+                        <div class="server-bar-divider">
+                            <div class="server-divider-inner"></div>
+                        </div>
+                    </li>
+                    <li class="server-list-item">
+                        <div class="server-side-pill"><span class="server-pill-inside"></span></div>
+                        <div class="server-list-wrapper">
+                            <div class="server-wrapper-inner">
+                                <div class="tooltips tt-right" data-tooltip="  cs50">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" overflow="visible">
+                                        <foreignObject x="0" y="0" width="48" height="48" class="server-icons-obj">
+                                            <div role="treeitem" data-list-item-id="guildsnav___393846237255696385"
+                                                tabindex="-1" aria-label="  cs50"><img class="icon_f90abb"
+                                                    src="https://cdn.discordapp.com/icons/393846237255696385/fbfd26f292fa0d095058eb715d7c6c40.webp?size=160"
+                                                    alt=" " width="48" height="48" aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="server-list-item">
+                        <div class="server-side-pill"><span class="server-pill-inside"></span></div>
+                        <div class="server-list-wrapper">
+                            <div class="server-wrapper-inner">
+                                <div class="tooltips tt-right" data-tooltip="☆.｡.:*The Krusty Krabs.｡.:*☆">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" overflow="visible">
+                                        <foreignObject x="0" y="0" width="48" height="48" class="server-icons-obj">
+                                            <div class="" role="treeitem"
+                                                data-list-item-id="guildsnav___914800352044388432" tabindex="-1"
+                                                aria-label="  ☆.｡.:*The Krusty Krabs.｡.:*☆"><img class="icon_f90abb"
+                                                    src="https://cdn.discordapp.com/icons/914800352044388432/3c1d5665c7c2eeb5006681e9bcb76bab.webp?size=160"
+                                                    alt=" " width="48" height="48" aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="side-bar app-item">
-            side
+        <div class="side-bar app-item no-select">
+            <div class="side-bar-nav">
+                <input class="side-bar-input" placeholder="Find a conversation">
+            </div>
+            <div class="side-bar-main">
+                <!-- side bar title -->
+                <div class="side-main-title">
+                    <div class="wave-main-wrap"><!-- wave svg -->
+                        <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z">
+                            </path>
+                            <path fill="currentColor"
+                                d="M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1a8 8 0 0 1 8 8 2 2 0 0 1-2 2 .21.21 0 0 1-.2-.15 7.65 7.65 0 0 0-1.32-2.3c-.15-.2-.42-.06-.39.17l.25 2c.02.15-.1.28-.25.28H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="main-title-wrapper">
+                        <div class="main-title-text">Friends</div>
+                    </div>
+                </div>
+
+                <!-- side bar label -->
+                <div class="side-bar-label">
+                    <div class="side-label-text">Direct Messages</div>
+                </div>
+
+                <ul class="private-channels unstyle-list">
+                    <li>
+                        <div class="dm-item dm-item-1">
+                            <div class="dm-info">
+                                <div class="dm-icon-wrapper">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                        <foreignObject class="wrap-dm-img" x="0" y="0" width="32" height="32">
+                                            <div><img style="height: 32px; width: 32px;"
+                                                    src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=44"
+                                                    alt=" " aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                                <div class="dm-info-text">
+                                    <div class="dm-info-name">
+                                        David
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dm-item dm-item-2">
+                            <div class="dm-info">
+                                <div class="dm-icon-wrapper">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                        <foreignObject class="wrap-dm-img" x="0" y="0" width="32" height="32">
+                                            <div><img style="height: 32px; width: 32px;"
+                                                    src="https://cdn.discordapp.com/avatars/900435714880180225/cee12ae94c7d2b0a2d401ebd2c99ccae.webp?size=44"
+                                                    alt=" " aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                                <div class="dm-info-text">
+                                    <div class="dm-info-name">
+                                        who r u?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- side bar profile -->
+            <div class="side-bar-profile">
+                <div class="client-info">
+                    <div class="client-icon-wrapper">
+                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <foreignObject class="wrap-dm-img" x="0" y="0" width="32" height="32">
+                                <div><img style="height: 32px; width: 32px;"
+                                        src="https://cdn.discordapp.com/avatars/656179777904050204/74fc4f07b71c3763213de71456de9586.webp?size=44"
+                                        alt=" " aria-hidden="true"></div>
+                            </foreignObject>
+                        </svg>
+                    </div>
+                    <div class="client-info-text">
+                        <div class="client-info-name">
+                            Sushi
+                        </div>
+                        <div class="client-info-status">
+                            <div class="client-status-status">
+                                Viewing Package
+                            </div>
+                            <div class="client-status-username">
+                                orthogonalsushi
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="main app-item">
-            <div class="main-nav-con no-hover no-select">
+        <div class="main app-item no-select">
+            <div class="main-nav-con no-hover">
                 <div class="main-nav-bar">
                     <div class="wave-icon-wrap"><!-- wave svg -->
                         <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -57,7 +219,7 @@
                         <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" fill="none" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" fill="transparent"></circle>
-                            <path fill="rgb(35, 165, 89)" fill-rule="evenodd"
+                            <path fill="oklab(0.786807 -0.0025776 -0.0110238)" fill-rule="evenodd"
                                 d="M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z"
                                 clip-rule="evenodd"></path>
                         </svg>
@@ -77,10 +239,10 @@
                     </svg>
                 </div>
             </div>
-            <div class="main-friends-heading">
-                <div class="friends-heading-text">Blocked - 2</div>
-            </div>
             <div class="main-friends-list">
+                <div class="main-friends-heading">
+                    <div class="friends-heading-text">Blocked - 2</div>
+                </div>
                 <div class="contains-friends">
                     <ul class="unstyle-list">
                         <li>
@@ -89,9 +251,9 @@
                                     <div class="friend-icon-wrapper">
                                         <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
                                             <foreignObject class="wrap-avt-img" x="0" y="0" width="32" height="32">
-                                              <div><img style="height: 32px; width: 32px;"
-                                                  src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=44"
-                                                  alt=" " aria-hidden="true"></div>
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=44"
+                                                        alt=" " aria-hidden="true"></div>
                                             </foreignObject>
                                         </svg>
                                     </div>
@@ -101,22 +263,23 @@
                                                 David
                                             </div>
                                             <div class="info-name-discriminator">
-                                                david074242
-                                            </div>
+                                                coolcat1213
+                                            </div>          
                                         </div>
                                         <div class="friend-info-subtext">
                                             Blocked
                                         </div>
                                     </div>
                                 </div>
-                                <div class="message-icon-wrapper">
-                                    <svg aria-hidden="true" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                        viewBox="0 0 24 24">
-                                        <path fill="oklab(0.786807 -0.0025776 -0.0110238)"
-                                            d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"
-                                            class=""></path>
-                                    </svg>
+                                <div class="tooltips tt-top" data-tooltip="Message">
+                                    <div class="message-icon-wrapper">
+                                        <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="20"
+                                            height="20" fill="none" viewBox="0 0 24 24">
+                                            <path fill="oklab(0.786807 -0.0025776 -0.0110238)"
+                                                d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"
+                                                class=""></path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -126,9 +289,9 @@
                                     <div class="friend-icon-wrapper">
                                         <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
                                             <foreignObject class="wrap-avt-img" x="0" y="0" width="32" height="32">
-                                              <div><img style="height: 32px; width: 32px;"
-                                                  src="https://cdn.discordapp.com/avatars/900435714880180225/cee12ae94c7d2b0a2d401ebd2c99ccae.webp?size=44"
-                                                  alt=" " aria-hidden="true"></div>
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="https://cdn.discordapp.com/avatars/900435714880180225/cee12ae94c7d2b0a2d401ebd2c99ccae.webp?size=44"
+                                                        alt=" " aria-hidden="true"></div>
                                             </foreignObject>
                                         </svg>
                                     </div>
@@ -138,7 +301,7 @@
                                                 who r u?
                                             </div>
                                             <div class="info-name-discriminator">
-                                                x2_b
+                                                wuru001
                                             </div>
                                         </div>
                                         <div class="friend-info-subtext">
@@ -146,14 +309,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="message-icon-wrapper">
-                                    <svg aria-hidden="true" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                        viewBox="0 0 24 24">
-                                        <path fill="oklab(0.786807 -0.0025776 -0.0110238)"
-                                            d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"
-                                            class=""></path>
-                                    </svg>
+                                <div class="tooltips tt-top" data-tooltip="Message">
+                                    <div class="message-icon-wrapper">
+                                        <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="20"
+                                            height="20" fill="none" viewBox="0 0 24 24">
+                                            <path fill="oklab(0.786807 -0.0025776 -0.0110238)"
+                                                d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"
+                                                class=""></path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </li>

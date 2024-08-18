@@ -307,14 +307,14 @@ body {
 }
 
 .friends-item::before {
-  width: 96%;
+  width: 98%;
   border-top: 1px solid var(--background-modifier-accent);
   border-top-width: 0.727273px;
   content: "";
   position: absolute;
   top: 0;
-  left: 2%;
-  right: 2%;
+  left: 1%;
+  right: 1%;
 
   /* display: block; */
 }
@@ -723,9 +723,10 @@ body {
   transition: all .15s ease-out;
 }
 
-.server-icons-obj:hover {
+.server-wrapper-inner:hover .server-icons-obj {
   border-radius: 30%;
 }
+
 
 .friends-wrapper-inner {
   background-color: var(--background-primary);
