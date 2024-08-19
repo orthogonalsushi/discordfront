@@ -197,18 +197,20 @@
                             </foreignObject>
                         </svg>
                     </div>
-                    <div class="nav-title-wrapper">
+                    <div class="nav-title-wrapper tt-bottom tooltips" data-tooltip="coolcat1213">
                         <div class="nav-bar-title">David</div>
                     </div>
                 </div>
-                <div class="profile-icon-wrap">
-                    <svg x="0" y="0" aria-hidden="true" role="img"
-                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M23 12.38c-.02.38-.45.58-.78.4a6.97 6.97 0 0 0-6.27-.08.54.54 0 0 1-.44 0 8.97 8.97 0 0 0-11.16 3.55c-.1.15-.1.35 0 .5.37.58.8 1.13 1.28 1.61.24.24.64.15.8-.15.19-.38.39-.73.58-1.02.14-.21.43-.1.4.15l-.19 1.96c-.02.19.07.37.23.47A8.96 8.96 0 0 0 12 21a.4.4 0 0 1 .38.27c.1.33.25.65.4.95.18.34-.02.76-.4.77L12 23a11 11 0 1 1 11-10.62ZM15.5 7.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clip-rule="evenodd" class=""></path>
-                        <path fill="currentColor" d="M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" class=""></path>
-                    </svg>
+                <div class="tt-bottom tooltips" data-tooltip="Show User Profile">
+                    <div class="profile-icon-wrap">
+                        <svg x="0" y="0" aria-hidden="true" role="img"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M23 12.38c-.02.38-.45.58-.78.4a6.97 6.97 0 0 0-6.27-.08.54.54 0 0 1-.44 0 8.97 8.97 0 0 0-11.16 3.55c-.1.15-.1.35 0 .5.37.58.8 1.13 1.28 1.61.24.24.64.15.8-.15.19-.38.39-.73.58-1.02.14-.21.43-.1.4.15l-.19 1.96c-.02.19.07.37.23.47A8.96 8.96 0 0 0 12 21a.4.4 0 0 1 .38.27c.1.33.25.65.4.95.18.34-.02.76-.4.77L12 23a11 11 0 1 1 11-10.62ZM15.5 7.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                clip-rule="evenodd" class=""></path>
+                            <path fill="currentColor" d="M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" class=""></path>
+                        </svg>
+                    </div>
                 </div>
                 <div class="channel-search-bar">
                     <input placeholder="Search" aria-label="Search" class="channel-search-input">
@@ -222,7 +224,7 @@
                     </div>
                 </div>
                 <!-- question mark, discord support -->
-                <a href="https://support.discord.com/" class="support-icon-wrap">
+                <a href="https://support.discord.com/" class="support-icon-wrap tt-bottom tooltips tt-Lskew" data-tooltip="Help">
                     <div>
                         <svg x="0" y="0" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" fill="none" viewBox="0 0 24 24">
@@ -235,35 +237,66 @@
                 </a>
 
             </div>
-
-            <div class="main-channel-dm">
-                <ol class="unstyle-list">
-                    <li>
-                        <div class="channel-user-info">
-                            <div class="channel-user-icon">
-                                <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
-                                    <foreignObject class="wrap-dm-img" x="0" y="0" width="80" height="80">
-                                        <div><img style="height: 80px; width: 80px;"
-                                                src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=128"
-                                                alt=" " aria-hidden="true"></div>
-                                    </foreignObject>
-                                </svg>
+            <div class="main-channel-wrap">
+                <div class="main-channel-dm">
+                    <ol class="unstyle-list">
+                        <li>
+                            <div class="channel-user-info">
+                                <div class="channel-user-icon">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+                                        <foreignObject class="wrap-dm-img" x="0" y="0" width="80" height="80">
+                                            <div><img style="height: 80px; width: 80px;"
+                                                    src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=128"
+                                                    alt=" " aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                                <h3 class="channel-user-title">David</h3>
+                                <h3 class="channel-user-username">coolcat1213</h3>
+                                <span class="channel-begin-text">This is the beginning of your direct message history with <strong>David</strong>.</span>
+                                <div class="user-mutuals">
+                                    <div class="mutuals-icon-wrapper">
+                                        <img src="https://cdn.discordapp.com/icons/505974446914535426/a_7f58804c4c31f1cc6c643bf881856743.webp?size=40" alt="" height="24px" width="24px">
+                                    </div>
+                                    <div class="mutuals-mutual-servers">1 Mutual Server</div>
+                                </div>
                             </div>
-                            <h3 class="channel-user-title">David</h3>
-                            <h3 class="channel-user-username">coolcat1213</h3>
-                            <span class="channel-begin-text">This is the beginning of your direct message history with <strong>David</strong>.</span>
-                        </div>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
+                        </li>
+                        <li>
+                            <div class="channel-divider">
+                                <span class="channel-divider-timestamp">August 19, 2024</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="channel-message-primary">
+                                <div class="channel-message-icon">
+                                    <img src="https://cdn.discordapp.com/avatars/647102819425583106/333a72885a51421e9ace884824abac87.webp?size=128" aria-hidden="true" alt=" " height="40px" width="40px">
+                                </div>
+                                <div class="channel-message-info">
+                                    <span class="channel-message-sender">David</span>
+                                    <span class="channel-message-timestamp">08/19/2024 4:13 PM</span>
+                                </div>
+                                <div class="channel-message-content">
+                                    <span>everything is so yellow outside</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="channel-message-secondary">
+                                <span class="secondary-time">4:14 PM</span>
+                                <div class="channel-message-content">
+                                    <span>Stormy</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="right-bar app-item">

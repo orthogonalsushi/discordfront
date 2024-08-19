@@ -82,6 +82,9 @@
   --bg-brand: rgb(88, 101, 242);
 
   --white: rgb(255, 255, 255);
+
+  /* message background */
+  --message-background: oklab(0.0852327 0.00000386313 0.00000170618 / 0.06);
 }
 
 /* scrollbar */
@@ -168,6 +171,7 @@ body {
   background-color: var(--background-primary);
   display: flex;
   flex-direction: column;
+  transform: scale(1);
 }
 
 /* nav bar in main */
@@ -191,7 +195,7 @@ body {
 
 .nav-bar-title {
   color: var(--header-primary);
-  display: inline-block;
+  display: flex;
   font-size: 16px;
   font-weight: 600;
 }
@@ -876,6 +880,15 @@ body {
 .tt-top.tooltips::after {
   position: absolute;
   top: -3%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.tt-bottom.tooltips::before,
+.tt-bottom.tooltips::after {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
   transform-origin: center;
 }
 
@@ -898,7 +911,6 @@ body {
 
 
 .tooltips::before {
-
   content: attr(data-tooltip);
   color: var(--interactive-hover);
   width: max-content;
@@ -908,6 +920,12 @@ body {
 
 .tt-top.tooltips::before {
   --translate-y: calc(-100% - var(--arrow-size));
+  padding: 7px 10px 7px 10px;
+  font-size: 12px;
+}
+
+.tt-bottom.tooltips::before {
+  --translate-y: calc(100% + var(--arrow-size));
   padding: 7px 10px 7px 10px;
   font-size: 12px;
 }
@@ -934,6 +952,13 @@ body {
   transform-origin: top;
 }
 
+.tt-bottom.tooltips::after {
+  border: 5.5px solid transparent;
+  --translate-y: calc(1 * var(--arrow-size));
+  border-bottom-color: var(--tooltip-color);
+  transform-origin: bottom;
+}
+
 .tt-right.tooltips::after {
   border: 5px solid transparent;
   --translate-x: calc(-1 * var(--arrow-size));
@@ -941,8 +966,31 @@ body {
   transform-origin: right center;
 }
 
+.tt-bottom.tt-Lskew.tooltips::before {
+  left: 20%;
+}
+
+.tt-top.tt-lower.tooltips::before,
+.tt-top.tt-lower.tooltips::after {
+  top: 30%;
+  position: fixed;
+}
+
 
 /* Channel inner */
+
+.main-channel-wrap {
+  /* display: flex;
+  flex-basis: 100%;
+  align-items: flex-end; */
+  overflow: hidden scroll;
+}
+
+/* .main-channel-dm {
+  flex-grow: 1;
+} */
+
+
 .channel-user-info {
   display: flex;
   flex-direction: column;
@@ -975,3 +1023,133 @@ body {
 strong {
   font-weight: 600;
 }
+
+.user-mutuals {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.mutuals-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.mutuals-mutual-servers {
+  cursor: pointer;
+  color: var(--interactive-normal);
+  font-size: 13px;
+  line-height: 1.2857142857142858;
+}
+
+.mutuals-mutual-servers:hover {
+  color: var(--interactive-hover)
+}
+
+.channel-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 14px 8px 16px;
+  background-color: var(--background-modifier-accent);
+  height: 1px;
+  width: 97%;
+}
+
+.channel-divider-timestamp {
+  background-color: var(--background-primary);
+  padding: 2px 4px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  line-height: 13px;
+}
+
+/* channel messages */
+
+
+.channel-message-primary, .channel-message-secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 2px 46px 2px 72px;
+  position: relative;
+}
+
+.channel-message-primary {
+  margin-top: 17px;
+}
+
+.channel-message-primary:hover, .channel-message-secondary:hover {
+  background-color: var(--message-background);
+}
+
+.channel-message-secondary:hover .secondary-time {
+  display: inline;
+}
+
+/* is 48px itself */
+.channel-message-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  top: 4px;
+}
+
+.channel-message-info {
+  display: flex;
+  align-items: center;
+}
+
+.channel-message-sender {
+  font-size: 15px;
+  line-height: 1.375rem;
+  color: var(--header-primary);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.channel-message-sender:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.channel-message-timestamp, .secondary-time {
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: var(--text-muted);
+  /* margin-left: 4px; */
+}
+
+.channel-message-timestamp {
+  margin-left: 4px;
+}
+
+.channel-message-content {
+  font-size: 15px;
+  line-height: 1.375rem;
+  color: var(--text-normal);
+  user-select: text;
+  font-weight: 400;
+}
+
+.secondary-time {
+  display: none;
+  position: absolute;
+  font-size: 0.65rem;
+  width: 60px;
+  left: 7px;
+  text-align: center;
+  z-index: 999;
+}
+
+/*  tooltips tt-top tt-lower" data-tooltip="Monday, August 19, 2024 4:14 PM" */

@@ -1,5 +1,5 @@
 :root {
-    --img-size: 200px;
+    --img-size: 250px;
 }    
 
 body {
@@ -8,8 +8,7 @@ body {
 
 .main {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 90vh;
 }
@@ -44,22 +43,22 @@ body {
     --arrow-size: 10px;
 
     position: absolute;
-    top: 50%;
-    right: -10%;
-    content: "";
-    transform: translateX(var(--translate-x, 0)) translateY(-50%) scale(var(--scale));
+    top: -3%;
+    left: 50%;
+    content: " ";
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
     transition: transform 0.15s ease;
-    transform-origin: left center;
+    transform-origin: bottom;
 }
 
 .contains::before {
-    --translate-x: calc(100% - var(--arrow-size));
+    --translate-y: calc(-100% - var(--arrow-size));
 
     content: attr(data-tooltip);
     color: white;
     padding: .5rem;
     width: max-content;
-    max-width: 100%;
+    /* max-width: 100%; */
     border-radius: 0.3rem;
     background: var(--tooltip-color);
 }
@@ -71,16 +70,22 @@ body {
 }
 
 .contains::after {
-    --translate-x: calc(-1 * var(--arrow-size));
+    --translate-y: calc(-1 * var(--arrow-size));
 
     content: '';
     border: 10px solid transparent;
-    border-right-color: var(--tooltip-color);
-    transform-origin:right center;
+    border-top-color: var(--tooltip-color);
+    transform-origin:top;
 }
 
-.limiting {
-    /* background-color: aqua; */
-    padding: 20px;
-    overflow: visible;
-}
+.nav-title-wrapper {
+    display: flex;
+    margin-right: 8px;
+  }
+
+  .nav-bar-title {
+    color: var(--header-primary);
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+  }
