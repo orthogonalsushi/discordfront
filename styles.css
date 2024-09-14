@@ -953,10 +953,11 @@ body {
   --scale: 1;
 }
 
-
-.tt-top.tt-sp:hover {
+.tooltips:hover .before.tt-top.tt-sp,
+.tooltips:hover .after.tt-top.tt-sp {
   transition-delay: 0.7s;
 }
+
 
 /* Channel inner */
 
