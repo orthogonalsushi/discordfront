@@ -953,6 +953,11 @@ body {
   --scale: 1;
 }
 
+
+.tt-top.tt-sp {
+  transition-delay: 0.7s;
+}
+
 /* Channel inner */
 
 .main-channel-wrap {
@@ -1122,8 +1127,7 @@ strong {
   display: none;
   position: absolute;
   font-size: 0.65rem;
-  width: 60px;
-  left: 7px;
+  left: 16px;
   text-align: center;
   z-index: 999;
 }
