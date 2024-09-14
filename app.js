@@ -6,6 +6,8 @@ function main() {
     pillToggle()
 
     pillToggleClick()
+
+    positionTooltips()
 }
 
 
@@ -78,6 +80,44 @@ function pillToggleClick() {
                 clicked = pillChild;
                 clickedIcon = icon;
             }
+        })
+    })
+}
+
+
+function positionTooltips() {
+    const ttTop = document.querySelectorAll(".tt-top");
+    ttTop.forEach((tooltip) => {
+        let contains = tooltip.parentElement;
+
+        contains.addEventListener("mouseenter", () => {
+            let containsPos = contains.getBoundingClientRect();
+            tooltip.style.top = `${containsPos.top}px`;
+            tooltip.style.left = `${containsPos.left + (containsPos.width * 0.5)}px`;
+        })
+    })
+
+
+    const ttRight = document.querySelectorAll(".tt-right");
+    ttRight.forEach((tooltip) => {
+        let contains = tooltip.parentElement;
+
+        contains.addEventListener("mouseenter", () => {
+            let containsPos = contains.getBoundingClientRect();
+            tooltip.style.top = `${containsPos.top + (containsPos.height * 0.5)}px`;
+            tooltip.style.left = `${containsPos.left + containsPos.width}px`;
+        })
+    })
+
+
+    const ttBottom = document.querySelectorAll(".tt-bottom");
+    ttBottom.forEach((tooltip) => {
+        let contains = tooltip.parentElement;
+
+        contains.addEventListener("mouseenter", () => {
+            let containsPos = contains.getBoundingClientRect();
+            tooltip.style.top = `${containsPos.top + containsPos.height}px`;
+            tooltip.style.left = `${containsPos.left + (containsPos.width * 0.5)}px`;
         })
     })
 }

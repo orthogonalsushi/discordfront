@@ -562,3 +562,134 @@ function messageIconToggle() {
 </body>
 
 </html>
+
+
+
+
+/* tooltips */
+
+/* .tooltips {
+  position: fixed;
+} */
+
+.before,
+.after {
+  --scale: 0;
+  --tooltip-color: #111214;
+  --arrow-size: 10px;
+  --offset: 10px;
+  position: fixed;
+
+  transform: translateX(var(--translate-x, -50%)) translateY(var(--translate-y, -50%)) scale(var(--scale));
+  transition: transform 50ms linear;
+
+  pointer-events: none;
+}
+
+
+.tt-top.before,
+.tt-top.after {
+  top: -3%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.tt-bottom.before,
+.tt-bottom.after {
+  bottom: 10%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.tt-right.before,
+.tt-right.after {
+  /* top: 50%; */
+  top: 43%;
+  right: -60%;
+  transform-origin: left center;
+}
+
+.server-list-wrapper {
+  transform: scale(1);
+}
+
+.server-wrapper-inner {
+  position: relative;
+}
+
+
+.before {
+  content: attr(data-tooltip);
+  color: var(--interactive-hover);
+  width: max-content;
+  border-radius: 5px;
+  background: var(--tooltip-color);
+}
+
+.tt-top.before {
+  --translate-y: calc(-100% - var(--arrow-size));
+  padding: 7px 10px 7px 10px;
+  font-size: 12px;
+}
+
+.tt-bottom.before {
+  --translate-y: calc(100% + var(--arrow-size));
+  padding: 7px 10px 7px 10px;
+  font-size: 12px;
+}
+
+.tt-right.before {
+  --translate-x: calc(100% - var(--arrow-size));
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 190px;
+  text-align: left;
+  max-height: 55px;
+}
+
+.tooltips:hover .before,
+.tooltips:hover .after {
+  --scale: 1;
+}
+
+.tt-top.after {
+  border: 5.5px solid transparent;
+  --translate-y: calc(-1 * var(--arrow-size));
+  border-top-color: var(--tooltip-color);
+  transform-origin: top;
+}
+
+.tt-bottom.after {
+  border: 5.5px solid transparent;
+  --translate-y: calc(1 * var(--arrow-size));
+  border-bottom-color: var(--tooltip-color);
+  transform-origin: bottom;
+}
+
+.tt-right.after {
+  border: 5px solid transparent;
+  --translate-x: calc(-1 * var(--arrow-size));
+  border-right-color: var(--tooltip-color);
+  transform-origin: right center;
+}
+
+.tt-bottom.tt-Lskew.tooltips::before {
+  left: 20%;
+}
+
+.tt-top.tt-lower.tooltips::before,
+.tt-top.tt-lower.tooltips::after {
+  top: 30%;
+  position: fixed;
+}
+
+
+                <a href="https://support.discord.com/" class="support-icon-wrap tt-bottom tooltips tt-Lskew" data-tooltip="Help">
+
+
+<div class="tooltips">
+                                    <div class="before tt-top">Monday, August 19, 2024 4:13 PM</div>
+                                    <div class="after tt-top"></div>
+                                    <span class="secondary-time">4:14 PM</span>
+                                </div>
