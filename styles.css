@@ -954,7 +954,7 @@ body {
 }
 
 
-.tt-top.tt-sp {
+.tt-top.tt-sp:hover {
   transition-delay: 0.7s;
 }
 
