@@ -88,6 +88,10 @@
 
   /* dm textbox textarea background */
   --channeltextarea-background: oklab(0.348481 0.000223666 -0.0107859);
+
+  /* dm textbox textarea color */
+  --channel-text-area-placeholder: oklab(0.543006 0.00145671 -0.0140392);
+
 }
 
 /* scrollbar */
@@ -979,12 +983,24 @@ body {
 .main-channel-wrap {
   overflow: hidden scroll;
   height: 100%;
+  padding-bottom: 24px;
 }
 
 .main-channel-textbox {
-  height: 44px;
+  min-height: 44px;
   background-color: var(--channeltextarea-background);
-  margin: 0px 16px 0px 16px;
+  margin-left: 16px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.main-textbox-text {
+  padding-top: 11px;
+  margin-left: 55px;
+  color: var(--channel-text-area-placeholder);
+  font-size: 15px;
+  width: fit-content;
 }
 
 
