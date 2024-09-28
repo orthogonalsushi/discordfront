@@ -693,3 +693,12 @@ function messageIconToggle() {
                                     <div class="after tt-top"></div>
                                     <span class="secondary-time">4:14 PM</span>
                                 </div>
+
+
+<svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+                                        <foreignObject class="wrap-dm-img" x="0" y="0" width="80" height="80">
+                                            <div><img style="height: 80px; width: 80px;" src="icons/david.webp" alt=" "
+                                                    aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+

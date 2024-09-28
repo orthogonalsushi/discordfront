@@ -92,6 +92,11 @@
   /* dm textbox textarea color */
   --channel-text-area-placeholder: oklab(0.543006 0.00145671 -0.0140392);
 
+  /* for server hashtag */
+  --background-accent: oklab(0.383845 0.000763029 -0.0122484);
+
+  /* for server hashtag on navbar */
+  --channel-icon: oklab(0.612849 -0.000356704 -0.0157219);
 }
 
 /* scrollbar */
@@ -199,18 +204,25 @@ body {
   flex-grow: 1;
 }
 
-.nav-bar-title {
+.nav-bar-title, .nav-bar-title-servers {
   color: var(--header-primary);
   display: flex;
   font-size: 16px;
   font-weight: 600;
 }
 
+.nav-bar-title-servers {
+  font-size: 14px;
+  margin-left: -4px;
+}
+
+
 .wave-icon-wrap,
 .nav-bar-divider,
 .support-icon-wrap,
 .nav-tabs-item,
-.profile-icon-wrap {
+.profile-icon-wrap,
+.members-icon-wrap {
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -317,21 +329,25 @@ body {
   width: 24px
 }
 
-.support-icon-wrap, .profile-icon-wrap {
+.support-icon-wrap, .profile-icon-wrap, .members-icon-wrap {
   color: oklab(0.786807 -0.0025776 -0.0110238);
 }
 
-.support-icon-wrap:hover, .profile-icon-wrap:hover {
+.support-icon-wrap:hover, .profile-icon-wrap:hover, .members-icon-wrap:hover {
   color: oklab(0.899401 -0.00192499 -0.00481987);
 }
 
 /* channel info */
-.channel-icon-wrapper {
+.channel-icon-wrapper, .server-icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 8px;
   padding-right: 12px; 
+}
+
+.server-icon-wrapper {
+  color: var(--channel-icon);
 }
 
 
@@ -1004,19 +1020,36 @@ body {
 }
 
 
-.channel-user-info {
+.channel-user-info, .channel-server-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 16px 16px 0 16px;
 }
 
-.channel-user-title {
+.channel-server-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background-color: var(--background-accent);
+  border-radius: 50%;
+}
+
+.channel-user-title, .channel-server-title {
   margin: 8px 0;
   font-weight: 700;
   color: var(--header-primary);
-  font-size: 32px;
   line-height: 1.25;
+}
+
+.channel-user-title {
+  font-size: 32px;
+}
+
+.channel-server-title {
+  font-size: 30px;
 }
 
 .channel-user-username {
@@ -1031,6 +1064,7 @@ body {
   color: var(--header-secondary);
   font-size: 14px;
   line-height: 1.25;
+  text-align: left;
 }
 
 strong {

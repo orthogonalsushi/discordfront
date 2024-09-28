@@ -8,6 +8,14 @@ function main() {
     pillToggleClick()
 
     positionTooltips()
+
+    
+    // all document loaded req functions here
+    document.addEventListener('DOMContentLoaded', function() {
+
+        scrollChannelBottom()
+
+    });
 }
 
 
@@ -120,6 +128,12 @@ function positionTooltips() {
             tooltip.style.left = `${containsPos.left + (containsPos.width * 0.5)}px`;
         })
     })
+}
+
+
+function scrollChannelBottom() {
+    const channelDiv = document.querySelector(".main-channel-wrap");
+    channelDiv.scrollTop = channelDiv.scrollHeight;
 }
 
 
