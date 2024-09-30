@@ -1,21 +1,17 @@
 
 
 function main() {
-    clientStatus()
+    clientStatus();
 
-    pillToggle()
+    pillToggle();
 
-    pillToggleClick()
+    pillToggleClick();
 
-    positionTooltips()
+    positionTooltips();
 
-    
-    // all document loaded req functions here
-    document.addEventListener('DOMContentLoaded', function() {
+    displayRightBar();
 
-        scrollChannelBottom()
-
-    });
+    scrollChannelBottom();
 }
 
 
@@ -137,4 +133,17 @@ function scrollChannelBottom() {
 }
 
 
-main()
+function displayRightBar() {
+    const toggler = document.querySelector(".member-list-toggler");
+    const rightBar = document.querySelector(".right-bar");
+
+    toggler.addEventListener("click", () => {
+        rightBar.classList.toggle("bar-visible");
+        toggler.parentElement.classList.toggle("active-member-icon");
+    })
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    main();
+});

@@ -273,6 +273,10 @@ body {
   background-color: var(--background-secondary);
 }
 
+.right-bar.bar-visible {
+  display: block;
+}
+
 /* search bar */
 .main-search-bar, .channel-search-bar {
   display: flex;
@@ -334,6 +338,10 @@ body {
 }
 
 .support-icon-wrap:hover, .profile-icon-wrap:hover, .members-icon-wrap:hover {
+  color: oklab(0.899401 -0.00192499 -0.00481987);
+}
+
+.active-member-icon {
   color: oklab(0.899401 -0.00192499 -0.00481987);
 }
 
@@ -624,7 +632,7 @@ body {
 
 /* dm list */
 
-.dm-item {
+.dm-item, .member-list-item {
   display: flex;
   height: 42px;
   margin-left: 8px;
@@ -632,17 +640,17 @@ body {
   border-radius: 4px;
 }
 
-.dm-item:hover {
+.dm-item:hover, .member-list-item:hover {
   color: var(--interactive-hover);
   background-color: var(--background-modifier-hover);
 }
 
-.dm-item:active {
+.dm-item:active, .member-list-item:active {
   color: var(--interactive-active);
   background-color: var(--background-modifier-active);
 }
 
-.dm-info, .client-info {
+.dm-info, .client-info, .member-list-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -653,26 +661,26 @@ body {
   max-width: 100%;
 }
 
-.dm-icon-wrapper, .client-icon-wrapper {
+.dm-icon-wrapper, .client-icon-wrapper, .member-list-icon-wrapper {
   display: flex;
   align-items: center;
 }
 
-.dm-icon-wrapper {
+.dm-icon-wrapper, .member-list-icon-wrapper {
   margin-right: 12px;
 }
 
-.dm-info-text, .client-info-text {
+.dm-info-text, .client-info-text, .member-list-item-text {
   overflow: hidden;
 }
 
-.dm-info-name, .client-info-name, .client-info-status, .client-status-status {
+.dm-info-name, .client-info-name, .client-info-status, .client-status-status, .member-list-item-name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.wrap-dm-img {
+.wrap-dm-img, .wrap-member-list-img {
   border-radius: 50%;
 }
 
@@ -996,10 +1004,25 @@ body {
   flex-grow: 1;
 } */
 
+.main-channel-flex {
+  display: flex;
+  overflow: hidden;
+}
+
+
+.main-channel-wrap-upper {
+  overflow: hidden;
+  height: 100%;
+}
+
 .main-channel-wrap {
   overflow: hidden scroll;
   height: 100%;
   padding-bottom: 24px;
+}
+
+.main-channel-wrap-upper .main-channel-wrap {
+  height: 90%;
 }
 
 .main-channel-textbox {
@@ -1196,4 +1219,22 @@ strong {
   left: 16px;
   text-align: center;
   z-index: 999;
+}
+
+
+/* channel side bar */
+.bar-server-header {
+  text-align: left;
+  color: var(--channels-default);
+  padding: 24px 8px 0 16px;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+
+.member-list-item {
+  margin-right: 8px;
 }
