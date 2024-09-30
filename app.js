@@ -9,7 +9,15 @@ function main() {
 
     positionTooltips();
 
-    displayRightBar();
+    // Only call displayMemberList if the element exists on the page
+    if (document.querySelector(".member-list-toggler")) {
+        displayMemberList();
+    }
+
+    // Only call displayUserProfile if the element exists on the page
+    if (document.querySelector(".user-profile-toggler")) {
+        displayUserProfile();
+    }
 
     scrollChannelBottom();
 }
@@ -133,13 +141,33 @@ function scrollChannelBottom() {
 }
 
 
-function displayRightBar() {
+function displayMemberList() {
     const toggler = document.querySelector(".member-list-toggler");
+    const togglerText = document.querySelector(".tt-server-toggler");
     const rightBar = document.querySelector(".right-bar");
 
     toggler.addEventListener("click", () => {
         rightBar.classList.toggle("bar-visible");
-        toggler.parentElement.classList.toggle("active-member-icon");
+        toggler.parentElement.classList.toggle("active-toggler-icon");
+
+        if (rightBar.classList.contains("bar-visible")) {
+            togglerText.textContent = "Hide Member List";
+        }
+        else {
+            togglerText.textContent = "Show Member List";
+        }
+    })
+}
+
+
+function displayUserProfile() {
+    const toggler = document.querySelector(".user-profile-toggler");
+    const togglerText = document.querySelector(".tt-user-toggler");
+    const rightBar = document.querySelector(".right-bar");
+
+    toggler.addEventListener("click", () => {
+        rightBar.classList.toggle("bar-visible");
+        toggler.parentElement.classList.toggle("active-toggler-icon");
     })
 }
 

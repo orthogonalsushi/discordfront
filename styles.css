@@ -341,7 +341,7 @@ body {
   color: oklab(0.899401 -0.00192499 -0.00481987);
 }
 
-.active-member-icon {
+.active-toggler-icon {
   color: oklab(0.899401 -0.00192499 -0.00481987);
 }
 
@@ -1022,7 +1022,7 @@ body {
 }
 
 .main-channel-wrap-upper .main-channel-wrap {
-  height: 90%;
+  height: 89%;
 }
 
 .main-channel-textbox {
