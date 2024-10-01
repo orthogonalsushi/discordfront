@@ -702,3 +702,373 @@ function messageIconToggle() {
                                         </foreignObject>
                                     </svg>
 
+
+<div class="main-channel-wrap">
+                <div class="main-channel-dm">
+                    <ol class="unstyle-list">
+                        <li>
+                            <div class="channel-user-info">
+                                <div class="channel-user-icon">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true">
+                                        <foreignObject class="wrap-dm-img" x="0" y="0" width="80" height="80">
+                                            <div><img style="height: 80px; width: 80px;"
+                                                    src="icons/david.webp"
+                                                    alt=" " aria-hidden="true"></div>
+                                        </foreignObject>
+                                    </svg>
+                                </div>
+                                <h3 class="channel-user-title">David</h3>
+                                <h3 class="channel-user-username">coolcat1213</h3>
+                                <span class="channel-begin-text">This is the beginning of your direct message history with <strong>David</strong>.</span>
+                                <div class="user-mutuals">
+                                    <div class="mutuals-icon-wrapper">
+                                        <img src="icons/cs50img.webp" alt="" height="24px" width="24px">
+                                    </div>
+                                    <div class="mutuals-mutual-servers">1 Mutual Server</div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+
+                        fsadlkjasd;fsadlkjasd
+
+
+                        <div class="main-channel-flex">
+                
+                <div class="main-channel-wrap-upper">
+    
+                    <div class="main-channel-wrap">
+                        <div class="main-channel-dm">
+                            <ol class="unstyle-list">
+                                <li>
+                                    <div class="channel-server-info">
+                                        <div class="channel-server-icon">
+                                            <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="42"
+                                                height="42" fill="none" viewBox="0 0 24 24">
+                                                <path fill="var(--white)" fill-rule="evenodd"
+                                                    d="M10.99 3.16A1 1 0 1 0 9 2.84L8.15 8H4a1 1 0 0 0 0 2h3.82l-.67 4H3a1 1 0 1 0 0 2h3.82l-.8 4.84a1 1 0 0 0 1.97.32L8.85 16h4.97l-.8 4.84a1 1 0 0 0 1.97.32l.86-5.16H20a1 1 0 1 0 0-2h-3.82l.67-4H21a1 1 0 1 0 0-2h-3.82l.8-4.84a1 1 0 1 0-1.97-.32L15.15 8h-4.97l.8-4.84ZM14.15 14l.67-4H9.85l-.67 4h4.97Z"
+                                                    clip-rule="evenodd" class=""></path>
+                                            </svg>
+                                        </div>
+                                        <h3 class="channel-server-title">Welcome to #general!</h3>
+                                        <span class="channel-begin-text">This is the start of the #general channel. well usually
+                                            general chat is for, you guessed it!, chatting in general. But we at CS50 think its
+                                            a big no no, and you shall only talk in CS50 terms. Quack Quack qualifies as a CS50
+                                            term thanks to the duck</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-divider">
+                                        <span class="channel-divider-timestamp">August 19, 2024</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/19/2024 4:13 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>everything is so yellow outside</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-secondary">
+                                        <div class="secondary-time tooltips">
+                                            <div class="before tt-top tt-sp">Monday, August 19, 2024 4:14 PM</div>
+                                            <div class="after tt-top tt-sp"></div>
+                                            4:14 PM
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Stormy</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-divider">
+                                        <span class="channel-divider-timestamp">August 25, 2024</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/25/2024 1:08 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Hii, sorry for being late!</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/25/2024 1:27 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Heyyy!, I am at Moscow rn</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-secondary">
+                                        <div class="secondary-time tooltips">
+                                            <div class="before tt-top tt-sp">Sunday, August 25, 2024 1:28 PM</div>
+                                            <div class="after tt-top tt-sp"></div>
+                                            1:28 PM
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>cya later?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/25/2024 1:30 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Have fun!</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-secondary">
+                                        <div class="secondary-time tooltips">
+                                            <div class="before tt-top tt-sp">Sunday, August 25, 2024 1:30 PM</div>
+                                            <div class="after tt-top tt-sp"></div>
+                                            1:30 PM
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>cya</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-divider">
+                                        <span class="channel-divider-timestamp">August 25, 2024</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/25/2024 7:45 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Hey, you heard the new track by The Weeknd?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/25/2024 7:50 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Yesss, it's on repeat! What do you think of it?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/25/2024 7:52 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>It's so good! Especially the chorus. Might try to add it as background music
+                                                to this site I’m working on.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/25/2024 7:55 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Ohh, you're doing some web dev? What are you building?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/25/2024 8:00 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Just a portfolio site, but I want to make it interactive, you know? Have some
+                                                cool animations and maybe even a custom playlist feature.</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/25/2024 8:05 PM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Sounds awesome! Are you using any specific framework for it?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-divider">
+                                        <span class="channel-divider-timestamp">August 26, 2024</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/david.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">David</span>
+                                            <span class="channel-message-timestamp">08/26/2024 11:00 AM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Morning! Yeah, I’m using React for the front-end and trying out some cool CSS
+                                                libraries for the animations. What do you think of Tailwind CSS?</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-primary">
+                                        <div class="channel-message-icon">
+                                            <img src="icons/sushi.webp" aria-hidden="true" alt=" " height="40px" width="40px">
+                                        </div>
+                                        <div class="channel-message-info">
+                                            <span class="channel-message-sender">Sushi</span>
+                                            <span class="channel-message-timestamp">08/26/2024 11:10 AM</span>
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>Good morning! Tailwind is really cool, makes styling so much faster. You’ll
+                                                love it for custom designs!</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="channel-message-secondary">
+                                        <div class="secondary-time tooltips">
+                                            <div class="before tt-top tt-sp">Monday, August 26, 2024 11:10 AM</div>
+                                            <div class="after tt-top tt-sp"></div>
+                                            11:10 AM
+                                        </div>
+                                        <div class="channel-message-content">
+                                            <span>(I actually haven't used it before, BOOTSTRAP ON TOP)</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="main-channel-textbox">
+                        <div class="main-textbox-text">Viewing @Package</div>
+                    </div>
+                </div>
+                <div class="right-bar">
+                    <div class="bar-server-header">MEMBERS — 3</div>
+                    <ul class="unstyle-list">
+                        <li class="server-member">
+                            <div class="member-list-item">
+                                <div class="member-list-info">
+                                    <div class="member-list-icon-wrapper">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                            <foreignObject class="wrap-member-list-img" x="0" y="0" width="32" height="32">
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="icons/david.webp"
+                                                        alt=" " aria-hidden="true"></div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                    <div class="member-list-item-text">
+                                        <div class="member-list-item-name">
+                                            David
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="server-member">
+                            <div class="member-list-item">
+                                <div class="member-list-info">
+                                    <div class="member-list-icon-wrapper">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                            <foreignObject class="wrap-member-list-img" x="0" y="0" width="32" height="32">
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="icons/sushi.webp"
+                                                        alt=" " aria-hidden="true"></div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                    <div class="member-list-item-text">
+                                        <div class="member-list-item-name">
+                                            Sushi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="server-member">
+                            <div class="member-list-item">
+                                <div class="member-list-info">
+                                    <div class="member-list-icon-wrapper">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                            <foreignObject class="wrap-member-list-img" x="0" y="0" width="32" height="32">
+                                                <div><img style="height: 32px; width: 32px;"
+                                                        src="icons/wuru.webp"
+                                                        alt=" " aria-hidden="true"></div>
+                                            </foreignObject>
+                                        </svg>
+                                    </div>
+                                    <div class="member-list-item-text">
+                                        <div class="member-list-item-name">
+                                            who r u?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>

@@ -144,7 +144,7 @@ function scrollChannelBottom() {
 function displayMemberList() {
     const toggler = document.querySelector(".member-list-toggler");
     const togglerText = document.querySelector(".tt-server-toggler");
-    const rightBar = document.querySelector(".right-bar");
+    const rightBar = document.querySelector(".right-bar-members");
 
     toggler.addEventListener("click", () => {
         rightBar.classList.toggle("bar-visible");
@@ -163,7 +163,7 @@ function displayMemberList() {
 function displayUserProfile() {
     const toggler = document.querySelector(".user-profile-toggler");
     const togglerText = document.querySelector(".tt-user-toggler");
-    const rightBar = document.querySelector(".right-bar");
+    const rightBar = document.querySelector(".right-bar-dms");
 
     toggler.addEventListener("click", () => {
         rightBar.classList.toggle("bar-visible");

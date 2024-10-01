@@ -92,6 +92,11 @@
   /* dm textbox textarea color */
   --channel-text-area-placeholder: oklab(0.543006 0.00145671 -0.0140392);
 
+  /* dm info */
+  --button-secondary-background: rgb(78, 80, 88);
+  --button-secondary-background-hover: rgb(109, 111, 120);
+  --custom-button-transition-duration: 170ms;
+
   /* for server hashtag */
   --background-accent: oklab(0.383845 0.000763029 -0.0122484);
 
@@ -266,14 +271,21 @@ body {
   display: flex;
 }
 
-.right-bar {
+.right-bar-members, .right-bar-dms {
   display: none;
   flex-shrink: 0;
-  width: 232px;
   background-color: var(--background-secondary);
 }
 
-.right-bar.bar-visible {
+.right-bar-members {
+  width: 232px;
+}
+
+.right-bar-dms {
+  width: 340px;
+}
+
+.right-bar-members.bar-visible, .right-bar-dms.bar-visible {
   display: block;
 }
 
@@ -1119,6 +1131,36 @@ strong {
 
 .mutuals-mutual-servers:hover {
   color: var(--interactive-hover)
+}
+
+.mutuals-divider {
+  width: 4px;
+  height: 4px;
+  margin: 0 16px;
+  border-radius: 50%;
+  background-color: var(--background-accent);
+}
+
+.mutuals-user-dm-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  user-select: none;
+  cursor: pointer;
+  background-color: var(--button-secondary-background);
+  padding: 2px 16px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  height: 24px;
+  letter-spacing: 0.24px;
+  transition: background-color var(--custom-button-transition-duration) ease, color var(--custom-button-transition-duration) ease;
+}
+
+.mutuals-user-dm-type:hover {
+  background-color: var(--button-secondary-background-hover);
 }
 
 .channel-divider {
