@@ -966,6 +966,10 @@ body {
   --translate-x: -65%;
 }
 
+.tt-top.before.tt-sp {
+  --translate-x: -80%;
+}
+
 
 .tt-right.after {
   border: var(--arrow-size) solid transparent;
@@ -996,10 +1000,12 @@ body {
   --scale: 1;
 }
 
-.tooltips:hover .before.tt-top.tt-sp,
+/* .tooltips:hover .before.tt-top.tt-sp,
 .tooltips:hover .after.tt-top.tt-sp {
   transition-delay: 0.7s;
-}
+} */
+
+/* CHANGE THIS */
 
 
 /* Channel inner */
@@ -1263,7 +1269,6 @@ strong {
   z-index: 999;
 }
 
-
 /* channel side bar */
 .bar-server-header {
   text-align: left;
@@ -1276,7 +1281,41 @@ strong {
   line-height: 16px;
 }
 
-
 .member-list-item {
   margin-right: 8px;
+}
+
+
+/* User DMS side bar */
+
+.dms-bar-icons {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  transition: opacity .6s ease;
+  color: white;
+}
+
+.dms-bar-banner {
+  position: relative;
+  height: 120px;
+  min-height: 120px;
+  background-color: var(--background-tertiary);
+}
+
+.dm-bar-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: oklab(0 0 0 / 0.54);
+  border-radius: 50%;
+}
+
+.dm-bar-icon:hover {
+  background-color: oklab(0 0 0 / 0.64);
 }

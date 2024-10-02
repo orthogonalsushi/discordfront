@@ -168,6 +168,13 @@ function displayUserProfile() {
     toggler.addEventListener("click", () => {
         rightBar.classList.toggle("bar-visible");
         toggler.parentElement.classList.toggle("active-toggler-icon");
+
+        if (rightBar.classList.contains("bar-visible")) {
+            togglerText.textContent = "Hide User Profile";
+        }
+        else {
+            togglerText.textContent = "Show User Profile";
+        }
     })
 }
 
