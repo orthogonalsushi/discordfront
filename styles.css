@@ -102,6 +102,9 @@
 
   /* for server hashtag on navbar */
   --channel-icon: oklab(0.612849 -0.000356704 -0.0157219);
+
+  /* for server bar tabs */
+  --profile-body-background-color: oklab(0.182455 -0.000417277 -0.0043847);
 }
 
 /* scrollbar */
@@ -274,7 +277,7 @@ body {
 .right-bar-members, .right-bar-dms {
   display: none;
   flex-shrink: 0;
-  background-color: var(--background-secondary);
+  background-color: var(--background-secondary-alt);
 }
 
 .right-bar-members {
@@ -1303,7 +1306,7 @@ strong {
   position: relative;
   height: 120px;
   min-height: 120px;
-  background-color: var(--background-tertiary);
+  background-color: rgb(27, 138, 129, 0.5);;
 }
 
 .dm-bar-icon {
@@ -1318,4 +1321,77 @@ strong {
 
 .dm-bar-icon:hover {
   background-color: oklab(0 0 0 / 0.64);
+}
+
+.dms-bar-icon-wrapper {
+  position: relative;
+}
+
+.dm-bar-icon-bg {
+  position: absolute;
+  top: -54px;
+  left: 10px;
+  width: 92px;
+  height: 92px;
+  background-color: var(--background-secondary-alt);
+  border-radius: 50%;
+}
+
+.dm-bar-icon-main {
+  position: absolute;
+  top: -48px;
+  left: 16px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.dm-bar-icon-main:hover {
+  filter: brightness(0.6);
+}
+
+.dms-bar-info-wrapper {
+  padding-top: 50px;
+  padding-left: 16px;
+  text-align: left;
+}
+
+.dms-bar-name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.24px;
+  line-height: 16px;
+}
+
+.dms-bar-name:hover, .dms-bar-username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dms-bar-username {
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.dms-bar-date-tab {
+  border-radius: 8px;
+  background-color: var(--profile-body-background-color);
+  padding: 12px;
+  margin-top: 12px;
+  max-width: 308px;
+}
+
+.dms-bar-date-header {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 650;
+}
+
+.dms-bar-date {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 350;
+  padding-top: 8px;
 }
